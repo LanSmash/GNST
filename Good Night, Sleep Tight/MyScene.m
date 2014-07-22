@@ -8,6 +8,7 @@
 
 #import "MyScene.h"
 #import "Scene2.h"
+#import "Scene3.h"
 #import "DrawingOrder.h"
 #import <AVFoundation/AVFoundation.h>
 
