@@ -10,6 +10,7 @@
 #import "Scene1.h"
 #import "Scene2.h"
 #import "Scene3.h"
+#import "Scene4.h"
 #import "EndScene.h"
 #import "DrawingOrder.h"
 #import <AVFoundation/AVFoundation.h>
@@ -21,13 +22,12 @@
     SKSpriteNode *_btnAnimal;
     SKSpriteNode *_btnNextScene;
     SKSpriteNode *_btnPrevScene;
+    SKSpriteNode *_btnHome;
     SKSpriteNode *_btnMoon;
     SKSpriteNode *_btnNightSky;
     SKSpriteNode *_btnHouse;
     AVAudioPlayer *_moonSound;
-    AVAudioPlayer *_giggleSound;
     AVAudioPlayer *_yawnSound;
-    BOOL _asleep;
     BOOL _HouseLightsOn;
 }
 
@@ -62,7 +62,7 @@
         
         // add the animal
         _btnAnimal = [SKSpriteNode spriteNodeWithImageNamed:@"cow"];
-        _btnAnimal.position = CGPointMake(650.0f,160.0f);
+        _btnAnimal.position = CGPointMake(650.0f,180.0f);
         _btnAnimal.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnAnimal];
         
@@ -72,6 +72,11 @@
         _btnMoon.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnMoon];
         
+        // add home button
+        _btnHome = [SKSpriteNode spriteNodeWithImageNamed:@"homebutton"];
+        _btnHome.position = CGPointMake(930.0f,740.0f);
+        _btnHome.zPosition = DrawingOrderOtherSprites;
+        [self addChild:_btnHome];
         
         // add previous scene button
         _btnPrevScene = [SKSpriteNode spriteNodeWithImageNamed:@"previousscenetab"];
@@ -89,9 +94,7 @@
         // sounds using the AVAudioPlayer so they can't be spammed
         NSURL *moonURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ukulele" ofType:@"wav"]];
         _moonSound = [[AVAudioPlayer alloc] initWithContentsOfURL:moonURL error:nil];
-        NSURL *giggleURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"monkey" ofType:@"wav"]];
-        _giggleSound = [[AVAudioPlayer alloc] initWithContentsOfURL:giggleURL error:nil];
-        NSURL *yawnURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"yawntemp" ofType:@"mp3"]];
+        NSURL *yawnURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"cow" ofType:@"wav"]];
         _yawnSound = [[AVAudioPlayer alloc] initWithContentsOfURL:yawnURL error:nil];
         
         
@@ -103,32 +106,7 @@
 
 
 
-- (void)tickleAnimal
-{
-    [_yawnSound stop];
-    [_giggleSound play];
-    
-    
-    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"sleepcow"];
-    // create an array to hold image textures
-    NSMutableArray *Textures = [NSMutableArray array];
-    
-    // load the animation frames from the TextureAtlas
-    int numImages = (int)Atlas.textureNames.count;
-    for (int i=1; i <= numImages; i++) {
-        NSString *textureName = [NSString stringWithFormat:@"cow%02i", i];
-        SKTexture *SequenceTexture = [Atlas textureNamed:textureName];
-        [Textures addObject:SequenceTexture];
-        //NSLog(@"%@",Atlas); //show which image assets are being used.
-        NSLog(@"%@",Textures); //show which image assets are being used.
-    }
-    
-    // repeat the animation a few times
-    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.05];
-    SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:2];
-    [_btnAnimal runAction:keepRepeatingAnimation];
-    
-}
+
 
 
 - (void)sleepAnimal
@@ -148,7 +126,7 @@
         [Textures addObject:SequenceTexture];
         NSLog(@"%@",Textures); //show which image assets are being used.
     }
-    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.05];
+    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.2];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnAnimal runAction:keepRepeatingAnimation];
     
@@ -192,40 +170,27 @@
 }
 
 
-- (void)houseTouch
+- (void)changeToHome
 {
-
-    
-    // get reference to the atlas
-    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"moon"];
-    // create an array to hold image textures
-    NSMutableArray *Textures = [NSMutableArray array];
-    
-    // load the animation frames from the TextureAtlas
-    int numImages = (int)Atlas.textureNames.count;
-    for (int i=1; i <= numImages; i++) {
-        NSString *textureName = [NSString stringWithFormat:@"moon%i", i];
-        SKTexture *SequenceTexture = [Atlas textureNamed:textureName];
-        [Textures addObject:SequenceTexture];
-        NSLog(@"%@",Textures); //show which image assets are being used.
-    }
-    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.15];
-    SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:6];
-    [_btnMoon runAction:keepRepeatingAnimation];
-    
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"click.wav" waitForCompletion:NO];
+    [self runAction:playSFX];
+    MyScene *nextScene = [MyScene sceneWithSize:self.size];
+    [self.view presentScene:nextScene transition:[SKTransition fadeWithDuration:0.5]];
 }
-
-
 
 
 - (void)changeToNextScene
 {
-    EndScene *nextScene = [EndScene sceneWithSize:self.size];
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"click.wav" waitForCompletion:NO];
+    [self runAction:playSFX];
+    Scene4 *nextScene = [Scene4 sceneWithSize:self.size];
     [self.view presentScene:nextScene transition:[SKTransition fadeWithDuration:0.5]];
 }
 
 - (void)changeToPrevScene
 {
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"click.wav" waitForCompletion:NO];
+    [self runAction:playSFX];
     Scene2 *prevScene = [Scene2 sceneWithSize:self.size];
     [self.view presentScene:prevScene transition:[SKTransition fadeWithDuration:0.5]];
 }
@@ -245,13 +210,8 @@
         if([_btnAnimal containsPoint:location])
         {
             NSLog(@"animal touch");
-            if (_asleep == YES) {
-                [self tickleAnimal];
-            }
-            else {
                 [self sleepAnimal];
-                _asleep = YES;
-            }
+
             
         }
         
@@ -259,15 +219,25 @@
             NSLog(@"house touch");
             if (_HouseLightsOn == YES) {
                 [_btnHouse setTexture:[SKTexture textureWithImageNamed:@"houselightsoff"]];
+                SKAction *playSFX = [SKAction playSoundFileNamed:@"lightswitch.wav" waitForCompletion:NO];
+                [self runAction:playSFX];
                 _HouseLightsOn = NO;
             }
             else {
                 [_btnHouse setTexture:[SKTexture textureWithImageNamed:@"houselightson"]];
+                SKAction *playSFX = [SKAction playSoundFileNamed:@"lightswitch.wav" waitForCompletion:NO];
+                [self runAction:playSFX];
                 _HouseLightsOn = YES;
             }
 
         }
         
+        if([_btnHome containsPoint:location])
+        {
+            NSLog(@"home button touch");
+            [self changeToHome];
+            
+        }
         
         if([_btnMoon containsPoint:location]) {
             NSLog(@"moon touch");

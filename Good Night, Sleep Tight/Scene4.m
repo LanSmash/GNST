@@ -1,11 +1,10 @@
 
-//  Scene2.m
+//  Scene4.m
 //  Good Night, Sleep Tight
 //
-//  Created by carahewitt on 22/07/2014.
+//  Created by carahewitt on 29/07/2014.
 //  Copyright (c) 2014 cara hewitt. All rights reserved.
 //
-
 
 #import "MyScene.h"
 #import "Scene1.h"
@@ -16,17 +15,19 @@
 #import "DrawingOrder.h"
 #import <AVFoundation/AVFoundation.h>
 
-@implementation Scene2 {
+
+
+@implementation Scene4 {
     
     SKSpriteNode *_btnAnimal;
     SKSpriteNode *_btnNextScene;
     SKSpriteNode *_btnPrevScene;
     SKSpriteNode *_btnHome;
-    SKSpriteNode *_btnBarnBackWall;
-    AVAudioPlayer *_moonSound;
+    SKSpriteNode *_btnNightSky;
+    SKSpriteNode *_btnBubble;
     AVAudioPlayer *_yawnSound;
-
 }
+
 
 
 
@@ -35,32 +36,21 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-
         
-
         
-        // add the barn background
-        _btnBarnBackWall = [SKSpriteNode spriteNodeWithImageNamed:@"barnbackwall"];
-        _btnBarnBackWall.position = CGPointMake(526.0f,300.0f);
-        _btnBarnBackWall.zPosition = DrawingOrderBackground;
-        [self addChild:_btnBarnBackWall];
-    
-        
-      
-        
-        // add the non-interactive foreground image assets
-        SKSpriteNode *barnroof = [SKSpriteNode spriteNodeWithImageNamed:@"s2foreground"];
-        barnroof.position = CGPointMake(size.width/2, size.height/2);
-        barnroof.zPosition = DrawingOrderForeground;
-        [self addChild:barnroof];
-        
+        // add the night sky background
+        _btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s4nightsky"];
+        _btnNightSky.position = CGPointMake(size.width/2, (size.height/2));
+        _btnNightSky.zPosition = DrawingOrderBackground;
+        [self addChild:_btnNightSky];
         
         
         // add the animal
-        _btnAnimal = [SKSpriteNode spriteNodeWithImageNamed:@"chicken"];
-        _btnAnimal.position = CGPointMake(505.0f,390.0f);
+        _btnAnimal = [SKSpriteNode spriteNodeWithImageNamed:@"fish"];
+        _btnAnimal.position = CGPointMake(670.0f,330.0f);
         _btnAnimal.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnAnimal];
+        
         
         // add home button
         _btnHome = [SKSpriteNode spriteNodeWithImageNamed:@"homebutton"];
@@ -80,18 +70,16 @@
         _btnNextScene.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnNextScene];
         
+        
         // sounds using the AVAudioPlayer so they can't be spammed
-        NSURL *moonURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ukulele" ofType:@"wav"]];
-        _moonSound = [[AVAudioPlayer alloc] initWithContentsOfURL:moonURL error:nil];
-        NSURL *yawnURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"chicken" ofType:@"wav"]];
+        NSURL *yawnURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"cow" ofType:@"wav"]];
         _yawnSound = [[AVAudioPlayer alloc] initWithContentsOfURL:yawnURL error:nil];
         
-        [self addBarnContainer:size];
-
         
     }
     return self;
 }
+
 
 
 
@@ -104,59 +92,50 @@
     [_yawnSound play];
     
     // get reference to the atlas
-    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"chicken"];
+    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"sleepfish"];
     // create an array to hold image textures
     NSMutableArray *Textures = [NSMutableArray array];
     
     // load the animation frames from the TextureAtlas
     int numImages = (int)Atlas.textureNames.count;
     for (int i=1; i <= numImages; i++) {
-        NSString *textureName = [NSString stringWithFormat:@"chicken%02i", i];
+        NSString *textureName = [NSString stringWithFormat:@"fish%02i", i];
         SKTexture *SequenceTexture = [Atlas textureNamed:textureName];
         [Textures addObject:SequenceTexture];
         NSLog(@"%@",Textures); //show which image assets are being used.
     }
-    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.15];
+    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnAnimal runAction:keepRepeatingAnimation];
     
     
     //add "good night, monkey" text
-    SKSpriteNode *goodnightMonkey = [SKSpriteNode spriteNodeWithImageNamed:@"goodnight-chicken"];
-    goodnightMonkey.position = CGPointMake(530.0f, 180.0f);
+    SKSpriteNode *goodnightMonkey = [SKSpriteNode spriteNodeWithImageNamed:@"goodnight-cow"];
+    goodnightMonkey.position = CGPointMake(780.0f, 50.0f);
     goodnightMonkey.zPosition = DrawingOrderOtherSprites;
     goodnightMonkey.alpha = 0.0;
     SKAction *fadeIn = [SKAction fadeAlphaTo:1.0 duration:2.0];
     [self addChild:goodnightMonkey];
     [goodnightMonkey runAction:fadeIn];
     
+    
+    
+    
+}
+
+- (void)addBubbles {
+
+
 
     
 }
 
 
 
+//- (void)popBubbles {
+//    _btnBubble setTexture:[SKTexture textureWithImageNamed:@"bubblepop"];
+//}
 
-
-
--(void) addBarnContainer:(CGSize)size {
-
-    SKNode *bottomEdge = [SKNode node];
-    bottomEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0,43) toPoint:CGPointMake(size.width, 43)];
-    
-    SKNode *leftEdge = [SKNode node];
-    leftEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(234,size.height) toPoint:CGPointMake(234, 1)];
-    
-    SKNode *rightEdge = [SKNode node];
-    rightEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(818,size.height) toPoint:CGPointMake(818, 1)];
-    
-    [self addChild:bottomEdge];
-    [self addChild:leftEdge];
-    [self addChild:rightEdge];
-    
-    
-    
-}
 
 
 
@@ -174,7 +153,7 @@
 {
     SKAction *playSFX = [SKAction playSoundFileNamed:@"click.wav" waitForCompletion:NO];
     [self runAction:playSFX];
-    Scene3 *nextScene = [Scene3 sceneWithSize:self.size];
+    EndScene *nextScene = [EndScene sceneWithSize:self.size];
     [self.view presentScene:nextScene transition:[SKTransition fadeWithDuration:0.5]];
 }
 
@@ -182,9 +161,10 @@
 {
     SKAction *playSFX = [SKAction playSoundFileNamed:@"click.wav" waitForCompletion:NO];
     [self runAction:playSFX];
-    Scene1 *prevScene = [Scene1 sceneWithSize:self.size];
+    Scene3 *prevScene = [Scene3 sceneWithSize:self.size];
     [self.view presentScene:prevScene transition:[SKTransition fadeWithDuration:0.5]];
 }
+
 
 
 
@@ -200,10 +180,11 @@
         if([_btnAnimal containsPoint:location])
         {
             NSLog(@"animal touch");
-                [self sleepAnimal];
-
+            [self sleepAnimal];
+            
             
         }
+        
         
         if([_btnHome containsPoint:location])
         {
@@ -212,24 +193,25 @@
             
         }
         
-        else
-            if([_btnBarnBackWall containsPoint:location])
+        if ([_btnBubble containsPoint:location]) {
+            [_btnBubble setTexture:[SKTexture textureWithImageNamed:@"bubblepop"]];
+            NSLog(@"bubble touch");
+            //[self removeFromParent];
+        }
+
+        else {
+            if([_btnNightSky containsPoint:location])
             {
-                NSLog(@"barn touch");
-                SKSpriteNode *egg = [SKSpriteNode spriteNodeWithImageNamed:@"egg"];
-                egg.position = location;
-                egg.zPosition = DrawingOrderOtherSprites;
-                //add a physics body
-                egg.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:egg.frame.size.width/2];
-                [self addChild:egg];
-                SKAction *playSFX = [SKAction playSoundFileNamed:@"plop.wav" waitForCompletion:NO];
+                NSLog(@"sky touch");
+                
+                _btnBubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble"];
+                _btnBubble.zPosition = DrawingOrderStars;
+                _btnBubble.position = location;
+                [self addChild:_btnBubble];
+                SKAction *playSFX = [SKAction playSoundFileNamed:@"ting.wav" waitForCompletion:NO];
                 [self runAction:playSFX];
+                
             }
-        
-
-        
-
-
 
             
         }
@@ -237,7 +219,7 @@
         
     }
     
-
+}
 
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {

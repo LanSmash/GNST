@@ -10,6 +10,7 @@
 #import "Scene1.h"
 #import "Scene2.h"
 #import "Scene3.h"
+#import "Scene4.h"
 #import "EndScene.h"
 #import "DrawingOrder.h"
 #import <AVFoundation/AVFoundation.h>
@@ -57,7 +58,7 @@
         
         
         // add the start button
-        _btnBegin = [SKSpriteNode spriteNodeWithImageNamed:@"beginbutton"];
+        _btnBegin = [SKSpriteNode spriteNodeWithImageNamed:@"letsbeginbutton"];
         _btnBegin.position = CGPointMake(size.width/2, 250.0f);
         _btnBegin.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnBegin];
@@ -116,6 +117,8 @@
 
 - (void)changeToNextScene
 {
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"click.wav" waitForCompletion:NO];
+    [self runAction:playSFX];
     Scene1 *secondScene = [Scene1 sceneWithSize:self.size];
     [self.view presentScene:secondScene transition:[SKTransition fadeWithDuration:0.5]];
 }

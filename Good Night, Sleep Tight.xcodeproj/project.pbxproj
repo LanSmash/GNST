@@ -23,18 +23,11 @@
 		8A13445C196BA00900E6EE72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A134437196BA00900E6EE72 /* UIKit.framework */; };
 		8A134464196BA00900E6EE72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A134462196BA00900E6EE72 /* InfoPlist.strings */; };
 		8A134466196BA00900E6EE72 /* Good_Night__Sleep_TightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A134465196BA00900E6EE72 /* Good_Night__Sleep_TightTests.m */; };
-		8A134478196BAB8300E6EE72 /* ting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8A134477196BAB8300E6EE72 /* ting.wav */; };
 		8ACC82481974A41500B7058B /* Scene2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC82471974A41500B7058B /* Scene2.m */; };
 		8ACC824A1974C9CD00B7058B /* DimensionTest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC82491974C9CD00B7058B /* DimensionTest@2x.png */; };
 		8ACC824C1974CD6100B7058B /* DimensionTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC824B1974CD6100B7058B /* DimensionTest.png */; };
-		8ACC82841975377100B7058B /* monkey.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC82821975377100B7058B /* monkey.wav */; };
-		8ACC82851975377100B7058B /* ukulele.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC82831975377100B7058B /* ukulele.wav */; };
-		8ACC828719753AEC00B7058B /* yawntemp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC828619753AEC00B7058B /* yawntemp.mp3 */; };
 		8ACC83FB197DEDBE00B7058B /* Scene3.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC83FA197DEDBE00B7058B /* Scene3.m */; };
 		8ACC845E197F45BE00B7058B /* EndScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC845D197F45BE00B7058B /* EndScene.m */; };
-		8ACC8462197F93D000B7058B /* chicken-asleep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC845F197F93D000B7058B /* chicken-asleep.mp3 */; };
-		8ACC8463197F93D000B7058B /* chicken-awake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8460197F93D000B7058B /* chicken-awake.mp3 */; };
-		8ACC8464197F93D000B7058B /* plop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8461197F93D000B7058B /* plop.mp3 */; };
 		8ACC849C197F943000B7058B /* homebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8466197F943000B7058B /* homebutton@2x.png */; };
 		8ACC849D197F943000B7058B /* moon.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8467197F943000B7058B /* moon.atlas */; };
 		8ACC849E197F943000B7058B /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8468197F943000B7058B /* moon.png */; };
@@ -43,14 +36,11 @@
 		8ACC84A1197F943000B7058B /* nextscene@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC846B197F943000B7058B /* nextscene@2x.png */; };
 		8ACC84A4197F943000B7058B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC846E197F943000B7058B /* star.png */; };
 		8ACC84A5197F943000B7058B /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC846F197F943000B7058B /* star@2x.png */; };
-		8ACC84A6197F943000B7058B /* zzz.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8470197F943000B7058B /* zzz.atlas */; };
-		8ACC84A7197F943000B7058B /* beginbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8472197F943000B7058B /* beginbutton@2x.png */; };
 		8ACC84A9197F943000B7058B /* gigglemonkey.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8475197F943000B7058B /* gigglemonkey.atlas */; };
 		8ACC84AA197F943000B7058B /* goodnightMonkeyText.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8476197F943000B7058B /* goodnightMonkeyText.png */; };
 		8ACC84AB197F943000B7058B /* goodnightMonkeyText@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8477197F943000B7058B /* goodnightMonkeyText@2x.png */; };
 		8ACC84AD197F943000B7058B /* leaves1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8479197F943000B7058B /* leaves1.png */; };
 		8ACC84AE197F943000B7058B /* leaves1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC847A197F943000B7058B /* leaves1@2x.png */; };
-		8ACC84AF197F943000B7058B /* leaves2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC847B197F943000B7058B /* leaves2.atlas */; };
 		8ACC84B0197F943000B7058B /* leaves2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC847C197F943000B7058B /* leaves2.png */; };
 		8ACC84B1197F943000B7058B /* leaves2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC847D197F943000B7058B /* leaves2@2x.png */; };
 		8ACC84B2197F943000B7058B /* monkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC847E197F943000B7058B /* monkey.png */; };
@@ -58,34 +48,44 @@
 		8ACC84B4197F943000B7058B /* s1foreground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8480197F943000B7058B /* s1foreground@2x.png */; };
 		8ACC84B5197F943000B7058B /* s1nightsky@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8481197F943000B7058B /* s1nightsky@2x.png */; };
 		8ACC84B6197F943000B7058B /* sleepmonkey.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8482197F943000B7058B /* sleepmonkey.atlas */; };
-		8ACC84B7197F943000B7058B /* zzz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8483197F943000B7058B /* zzz.png */; };
-		8ACC84B8197F943000B7058B /* zzz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8484197F943000B7058B /* zzz@2x.png */; };
-		8ACC84BB197F943000B7058B /* chicken.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8488197F943000B7058B /* chicken.atlas */; };
-		8ACC84BC197F943000B7058B /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8489197F943000B7058B /* chicken.png */; };
-		8ACC84BD197F943000B7058B /* chicken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC848A197F943000B7058B /* chicken@2x.png */; };
 		8ACC84C0197F943000B7058B /* egg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC848D197F943000B7058B /* egg.png */; };
 		8ACC84C1197F943000B7058B /* egg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC848E197F943000B7058B /* egg@2x.png */; };
 		8ACC84C2197F943000B7058B /* goodnight-chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC848F197F943000B7058B /* goodnight-chicken.png */; };
 		8ACC84C3197F943000B7058B /* goodnight-chicken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8490197F943000B7058B /* goodnight-chicken@2x.png */; };
-		8ACC84C6197F943000B7058B /* cow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8494197F943000B7058B /* cow@2x.png */; };
 		8ACC84C8197F943000B7058B /* goodnight-cow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8496197F943000B7058B /* goodnight-cow@2x.png */; };
 		8ACC84C9197F943000B7058B /* houselightsoff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8497197F943000B7058B /* houselightsoff@2x.png */; };
 		8ACC84CA197F943000B7058B /* houselightson@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8498197F943000B7058B /* houselightson@2x.png */; };
-		8ACC84CB197F943000B7058B /* Scene3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC8499197F943000B7058B /* Scene3.png */; };
-		8ACC84CD197F943000B7058B /* sleepcow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC849B197F943000B7058B /* sleepcow.atlas */; };
 		8ACC84D0197FA39C00B7058B /* Scene1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC84CF197FA39C00B7058B /* Scene1.m */; };
-		8ACC84D4197FC3CC00B7058B /* beginbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84D1197FC3CC00B7058B /* beginbutton@2x.png */; };
 		8ACC84D5197FC3CC00B7058B /* gnst@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84D2197FC3CC00B7058B /* gnst@2x.png */; };
 		8ACC84D6197FC3CC00B7058B /* s0nightsky@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84D3197FC3CC00B7058B /* s0nightsky@2x.png */; };
 		8ACC84DA197FC3DC00B7058B /* s2foreground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84D8197FC3DC00B7058B /* s2foreground@2x.png */; };
 		8ACC84DC197FC3FF00B7058B /* barnbackwall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84DB197FC3FF00B7058B /* barnbackwall@2x.png */; };
 		8ACC84DF197FC41100B7058B /* s3foreground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84DD197FC41100B7058B /* s3foreground@2x.png */; };
 		8ACC84E0197FC41100B7058B /* s3nightsky@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84DE197FC41100B7058B /* s3nightsky@2x.png */; };
-		8ACC84E5197FC41C00B7058B /* backtothestart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84E2197FC41C00B7058B /* backtothestart@2x.png */; };
-		8ACC84E6197FC41C00B7058B /* s4nightsky@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84E3197FC41C00B7058B /* s4nightsky@2x.png */; };
-		8ACC84E7197FC41C00B7058B /* theend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84E4197FC41C00B7058B /* theend@2x.png */; };
 		8ACC84EA197FC53800B7058B /* nextscenetab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84E8197FC53800B7058B /* nextscenetab@2x.png */; };
 		8ACC84EB197FC53800B7058B /* previousscenetab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC84E9197FC53800B7058B /* previousscenetab@2x.png */; };
+		8ACC85201980A94400B7058B /* chicken.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC85151980A94400B7058B /* chicken.wav */; };
+		8ACC85221980A94400B7058B /* monkey.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC85171980A94400B7058B /* monkey.wav */; };
+		8ACC85241980A94400B7058B /* ting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC85191980A94400B7058B /* ting.wav */; };
+		8ACC85251980A94400B7058B /* ukulele.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC851A1980A94400B7058B /* ukulele.wav */; };
+		8ACC852B1980A9E200B7058B /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC85271980A9E200B7058B /* click.wav */; };
+		8ACC852C1980A9E200B7058B /* cow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC85281980A9E200B7058B /* cow.wav */; };
+		8ACC852D1980A9E200B7058B /* lightswitch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC85291980A9E200B7058B /* lightswitch.wav */; };
+		8ACC852E1980A9E200B7058B /* plop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC852A1980A9E200B7058B /* plop.wav */; };
+		8ACC85361980ABB300B7058B /* cow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC85341980ABB300B7058B /* cow@2x.png */; };
+		8ACC85381980AF9D00B7058B /* chicken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC85371980AF9D00B7058B /* chicken@2x.png */; };
+		8ACC853A1980AFFB00B7058B /* chicken.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC85391980AFFB00B7058B /* chicken.atlas */; };
+		8ACC853C1980B76500B7058B /* letsbeginbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC853B1980B76500B7058B /* letsbeginbutton@2x.png */; };
+		8ACC85401980BA5E00B7058B /* sleepcow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC853F1980BA5E00B7058B /* sleepcow.atlas */; };
+		8ACC854319876AB200B7058B /* Scene4.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC854219876AB200B7058B /* Scene4.m */; };
+		8ACC854819876D1B00B7058B /* backtothestart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC854519876D1B00B7058B /* backtothestart@2x.png */; };
+		8ACC854A19876D1B00B7058B /* theend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC854719876D1B00B7058B /* theend@2x.png */; };
+		8ACC855119876D4900B7058B /* bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC854C19876D4900B7058B /* bubble@2x.png */; };
+		8ACC855219876D4900B7058B /* bubblepop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC854D19876D4900B7058B /* bubblepop@2x.png */; };
+		8ACC855419876D4900B7058B /* fish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC854F19876D4900B7058B /* fish@2x.png */; };
+		8ACC855519876D4900B7058B /* s4nightsky@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC855019876D4900B7058B /* s4nightsky@2x.png */; };
+		8ACC855719876D8F00B7058B /* sleepfish.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC855619876D8F00B7058B /* sleepfish.atlas */; };
+		8ACC855919876EC600B7058B /* endnightsky@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC855819876EC600B7058B /* endnightsky@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,22 +121,15 @@
 		8A134461196BA00900E6EE72 /* Good Night, Sleep TightTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Good Night, Sleep TightTests-Info.plist"; sourceTree = "<group>"; };
 		8A134463196BA00900E6EE72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8A134465196BA00900E6EE72 /* Good_Night__Sleep_TightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Good_Night__Sleep_TightTests.m; sourceTree = "<group>"; };
-		8A134477196BAB8300E6EE72 /* ting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ting.wav; path = "Good Night, Sleep Tight/ting.wav"; sourceTree = "<group>"; };
 		8ACC82461974A41500B7058B /* Scene2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene2.h; sourceTree = "<group>"; };
 		8ACC82471974A41500B7058B /* Scene2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene2.m; sourceTree = "<group>"; };
 		8ACC82491974C9CD00B7058B /* DimensionTest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DimensionTest@2x.png"; path = "Good Night, Sleep Tight/DimensionTest@2x.png"; sourceTree = "<group>"; };
 		8ACC824B1974CD6100B7058B /* DimensionTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DimensionTest.png; path = "Good Night, Sleep Tight/DimensionTest.png"; sourceTree = "<group>"; };
 		8ACC82751975007800B7058B /* DrawingOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingOrder.h; sourceTree = "<group>"; };
-		8ACC82821975377100B7058B /* monkey.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = monkey.wav; path = "Good Night, Sleep Tight/monkey.wav"; sourceTree = "<group>"; };
-		8ACC82831975377100B7058B /* ukulele.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ukulele.wav; path = "Good Night, Sleep Tight/ukulele.wav"; sourceTree = "<group>"; };
-		8ACC828619753AEC00B7058B /* yawntemp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = yawntemp.mp3; path = "Good Night, Sleep Tight/yawntemp.mp3"; sourceTree = "<group>"; };
 		8ACC83F9197DED8D00B7058B /* Scene3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene3.h; sourceTree = "<group>"; };
 		8ACC83FA197DEDBE00B7058B /* Scene3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene3.m; sourceTree = "<group>"; };
 		8ACC845C197F459100B7058B /* EndScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndScene.h; sourceTree = "<group>"; };
 		8ACC845D197F45BE00B7058B /* EndScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndScene.m; sourceTree = "<group>"; };
-		8ACC845F197F93D000B7058B /* chicken-asleep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "chicken-asleep.mp3"; path = "Good Night, Sleep Tight/chicken-asleep.mp3"; sourceTree = "<group>"; };
-		8ACC8460197F93D000B7058B /* chicken-awake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "chicken-awake.mp3"; path = "Good Night, Sleep Tight/chicken-awake.mp3"; sourceTree = "<group>"; };
-		8ACC8461197F93D000B7058B /* plop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = plop.mp3; path = "Good Night, Sleep Tight/plop.mp3"; sourceTree = "<group>"; };
 		8ACC8466197F943000B7058B /* homebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homebutton@2x.png"; sourceTree = "<group>"; };
 		8ACC8467197F943000B7058B /* moon.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moon.atlas; sourceTree = "<group>"; };
 		8ACC8468197F943000B7058B /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
@@ -145,14 +138,11 @@
 		8ACC846B197F943000B7058B /* nextscene@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextscene@2x.png"; sourceTree = "<group>"; };
 		8ACC846E197F943000B7058B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		8ACC846F197F943000B7058B /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
-		8ACC8470197F943000B7058B /* zzz.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zzz.atlas; sourceTree = "<group>"; };
-		8ACC8472197F943000B7058B /* beginbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beginbutton@2x.png"; sourceTree = "<group>"; };
 		8ACC8475197F943000B7058B /* gigglemonkey.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = gigglemonkey.atlas; sourceTree = "<group>"; };
 		8ACC8476197F943000B7058B /* goodnightMonkeyText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goodnightMonkeyText.png; sourceTree = "<group>"; };
 		8ACC8477197F943000B7058B /* goodnightMonkeyText@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goodnightMonkeyText@2x.png"; sourceTree = "<group>"; };
 		8ACC8479197F943000B7058B /* leaves1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaves1.png; sourceTree = "<group>"; };
 		8ACC847A197F943000B7058B /* leaves1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaves1@2x.png"; sourceTree = "<group>"; };
-		8ACC847B197F943000B7058B /* leaves2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = leaves2.atlas; sourceTree = "<group>"; };
 		8ACC847C197F943000B7058B /* leaves2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaves2.png; sourceTree = "<group>"; };
 		8ACC847D197F943000B7058B /* leaves2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaves2@2x.png"; sourceTree = "<group>"; };
 		8ACC847E197F943000B7058B /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
@@ -160,35 +150,46 @@
 		8ACC8480197F943000B7058B /* s1foreground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s1foreground@2x.png"; sourceTree = "<group>"; };
 		8ACC8481197F943000B7058B /* s1nightsky@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s1nightsky@2x.png"; sourceTree = "<group>"; };
 		8ACC8482197F943000B7058B /* sleepmonkey.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sleepmonkey.atlas; sourceTree = "<group>"; };
-		8ACC8483197F943000B7058B /* zzz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zzz.png; sourceTree = "<group>"; };
-		8ACC8484197F943000B7058B /* zzz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zzz@2x.png"; sourceTree = "<group>"; };
-		8ACC8488197F943000B7058B /* chicken.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = chicken.atlas; sourceTree = "<group>"; };
-		8ACC8489197F943000B7058B /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
-		8ACC848A197F943000B7058B /* chicken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chicken@2x.png"; sourceTree = "<group>"; };
 		8ACC848D197F943000B7058B /* egg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egg.png; sourceTree = "<group>"; };
 		8ACC848E197F943000B7058B /* egg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egg@2x.png"; sourceTree = "<group>"; };
 		8ACC848F197F943000B7058B /* goodnight-chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goodnight-chicken.png"; sourceTree = "<group>"; };
 		8ACC8490197F943000B7058B /* goodnight-chicken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goodnight-chicken@2x.png"; sourceTree = "<group>"; };
-		8ACC8494197F943000B7058B /* cow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cow@2x.png"; sourceTree = "<group>"; };
 		8ACC8496197F943000B7058B /* goodnight-cow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goodnight-cow@2x.png"; sourceTree = "<group>"; };
 		8ACC8497197F943000B7058B /* houselightsoff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "houselightsoff@2x.png"; sourceTree = "<group>"; };
 		8ACC8498197F943000B7058B /* houselightson@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "houselightson@2x.png"; sourceTree = "<group>"; };
-		8ACC8499197F943000B7058B /* Scene3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scene3.png; sourceTree = "<group>"; };
-		8ACC849B197F943000B7058B /* sleepcow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sleepcow.atlas; sourceTree = "<group>"; };
 		8ACC84CE197FA38E00B7058B /* Scene1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene1.h; sourceTree = "<group>"; };
 		8ACC84CF197FA39C00B7058B /* Scene1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene1.m; sourceTree = "<group>"; };
-		8ACC84D1197FC3CC00B7058B /* beginbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beginbutton@2x.png"; sourceTree = "<group>"; };
 		8ACC84D2197FC3CC00B7058B /* gnst@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gnst@2x.png"; sourceTree = "<group>"; };
 		8ACC84D3197FC3CC00B7058B /* s0nightsky@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s0nightsky@2x.png"; sourceTree = "<group>"; };
 		8ACC84D8197FC3DC00B7058B /* s2foreground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s2foreground@2x.png"; sourceTree = "<group>"; };
 		8ACC84DB197FC3FF00B7058B /* barnbackwall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barnbackwall@2x.png"; sourceTree = "<group>"; };
 		8ACC84DD197FC41100B7058B /* s3foreground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s3foreground@2x.png"; sourceTree = "<group>"; };
 		8ACC84DE197FC41100B7058B /* s3nightsky@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s3nightsky@2x.png"; sourceTree = "<group>"; };
-		8ACC84E2197FC41C00B7058B /* backtothestart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backtothestart@2x.png"; sourceTree = "<group>"; };
-		8ACC84E3197FC41C00B7058B /* s4nightsky@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s4nightsky@2x.png"; sourceTree = "<group>"; };
-		8ACC84E4197FC41C00B7058B /* theend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theend@2x.png"; sourceTree = "<group>"; };
 		8ACC84E8197FC53800B7058B /* nextscenetab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextscenetab@2x.png"; sourceTree = "<group>"; };
 		8ACC84E9197FC53800B7058B /* previousscenetab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "previousscenetab@2x.png"; sourceTree = "<group>"; };
+		8ACC85151980A94400B7058B /* chicken.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chicken.wav; sourceTree = "<group>"; };
+		8ACC85171980A94400B7058B /* monkey.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monkey.wav; sourceTree = "<group>"; };
+		8ACC85191980A94400B7058B /* ting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ting.wav; sourceTree = "<group>"; };
+		8ACC851A1980A94400B7058B /* ukulele.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ukulele.wav; sourceTree = "<group>"; };
+		8ACC85271980A9E200B7058B /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		8ACC85281980A9E200B7058B /* cow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cow.wav; sourceTree = "<group>"; };
+		8ACC85291980A9E200B7058B /* lightswitch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lightswitch.wav; sourceTree = "<group>"; };
+		8ACC852A1980A9E200B7058B /* plop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = plop.wav; sourceTree = "<group>"; };
+		8ACC85341980ABB300B7058B /* cow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cow@2x.png"; sourceTree = "<group>"; };
+		8ACC85371980AF9D00B7058B /* chicken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chicken@2x.png"; sourceTree = "<group>"; };
+		8ACC85391980AFFB00B7058B /* chicken.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = chicken.atlas; sourceTree = "<group>"; };
+		8ACC853B1980B76500B7058B /* letsbeginbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "letsbeginbutton@2x.png"; sourceTree = "<group>"; };
+		8ACC853F1980BA5E00B7058B /* sleepcow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sleepcow.atlas; sourceTree = "<group>"; };
+		8ACC854119876AA300B7058B /* Scene4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene4.h; sourceTree = "<group>"; };
+		8ACC854219876AB200B7058B /* Scene4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene4.m; sourceTree = "<group>"; };
+		8ACC854519876D1B00B7058B /* backtothestart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backtothestart@2x.png"; sourceTree = "<group>"; };
+		8ACC854719876D1B00B7058B /* theend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theend@2x.png"; sourceTree = "<group>"; };
+		8ACC854C19876D4900B7058B /* bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble@2x.png"; sourceTree = "<group>"; };
+		8ACC854D19876D4900B7058B /* bubblepop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubblepop@2x.png"; sourceTree = "<group>"; };
+		8ACC854F19876D4900B7058B /* fish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fish@2x.png"; sourceTree = "<group>"; };
+		8ACC855019876D4900B7058B /* s4nightsky@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s4nightsky@2x.png"; sourceTree = "<group>"; };
+		8ACC855619876D8F00B7058B /* sleepfish.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sleepfish.atlas; sourceTree = "<group>"; };
+		8ACC855819876EC600B7058B /* endnightsky@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "endnightsky@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,15 +220,8 @@
 		8A134427196BA00900E6EE72 = {
 			isa = PBXGroup;
 			children = (
-				8ACC845F197F93D000B7058B /* chicken-asleep.mp3 */,
-				8ACC8460197F93D000B7058B /* chicken-awake.mp3 */,
-				8ACC8461197F93D000B7058B /* plop.mp3 */,
-				8ACC828619753AEC00B7058B /* yawntemp.mp3 */,
-				8ACC82821975377100B7058B /* monkey.wav */,
-				8ACC82831975377100B7058B /* ukulele.wav */,
 				8ACC824B1974CD6100B7058B /* DimensionTest.png */,
 				8ACC82491974C9CD00B7058B /* DimensionTest@2x.png */,
-				8A134477196BAB8300E6EE72 /* ting.wav */,
 				8A13443B196BA00900E6EE72 /* Good Night, Sleep Tight */,
 				8A13445F196BA00900E6EE72 /* Good Night, Sleep TightTests */,
 				8A134432196BA00900E6EE72 /* Frameworks */,
@@ -259,12 +253,14 @@
 		8A13443B196BA00900E6EE72 /* Good Night, Sleep Tight */ = {
 			isa = PBXGroup;
 			children = (
+				8ACC85101980A94400B7058B /* soundassets */,
 				8ACC8465197F943000B7058B /* commonassets */,
 				8ACC8471197F943000B7058B /* scene0assets */,
 				8ACC8474197F943000B7058B /* scene1assets */,
 				8ACC8485197F943000B7058B /* scene2assets */,
 				8ACC8493197F943000B7058B /* scene3assets */,
-				8ACC84E1197FC41C00B7058B /* scene4assets */,
+				8ACC854419876D1B00B7058B /* endsceneassets */,
+				8ACC854B19876D4900B7058B /* scene4assets */,
 				8A134444196BA00900E6EE72 /* AppDelegate.h */,
 				8A134445196BA00900E6EE72 /* AppDelegate.m */,
 				8A134447196BA00900E6EE72 /* Main.storyboard */,
@@ -279,6 +275,8 @@
 				8ACC82471974A41500B7058B /* Scene2.m */,
 				8ACC83F9197DED8D00B7058B /* Scene3.h */,
 				8ACC83FA197DEDBE00B7058B /* Scene3.m */,
+				8ACC854119876AA300B7058B /* Scene4.h */,
+				8ACC854219876AB200B7058B /* Scene4.m */,
 				8ACC845C197F459100B7058B /* EndScene.h */,
 				8ACC845D197F45BE00B7058B /* EndScene.m */,
 				8A134452196BA00900E6EE72 /* Images.xcassets */,
@@ -329,7 +327,6 @@
 				8ACC846B197F943000B7058B /* nextscene@2x.png */,
 				8ACC846E197F943000B7058B /* star.png */,
 				8ACC846F197F943000B7058B /* star@2x.png */,
-				8ACC8470197F943000B7058B /* zzz.atlas */,
 			);
 			path = commonassets;
 			sourceTree = "<group>";
@@ -337,10 +334,9 @@
 		8ACC8471197F943000B7058B /* scene0assets */ = {
 			isa = PBXGroup;
 			children = (
-				8ACC84D1197FC3CC00B7058B /* beginbutton@2x.png */,
+				8ACC853B1980B76500B7058B /* letsbeginbutton@2x.png */,
 				8ACC84D2197FC3CC00B7058B /* gnst@2x.png */,
 				8ACC84D3197FC3CC00B7058B /* s0nightsky@2x.png */,
-				8ACC8472197F943000B7058B /* beginbutton@2x.png */,
 			);
 			path = scene0assets;
 			sourceTree = "<group>";
@@ -353,7 +349,6 @@
 				8ACC8477197F943000B7058B /* goodnightMonkeyText@2x.png */,
 				8ACC8479197F943000B7058B /* leaves1.png */,
 				8ACC847A197F943000B7058B /* leaves1@2x.png */,
-				8ACC847B197F943000B7058B /* leaves2.atlas */,
 				8ACC847C197F943000B7058B /* leaves2.png */,
 				8ACC847D197F943000B7058B /* leaves2@2x.png */,
 				8ACC847E197F943000B7058B /* monkey.png */,
@@ -361,8 +356,6 @@
 				8ACC8480197F943000B7058B /* s1foreground@2x.png */,
 				8ACC8481197F943000B7058B /* s1nightsky@2x.png */,
 				8ACC8482197F943000B7058B /* sleepmonkey.atlas */,
-				8ACC8483197F943000B7058B /* zzz.png */,
-				8ACC8484197F943000B7058B /* zzz@2x.png */,
 			);
 			path = scene1assets;
 			sourceTree = "<group>";
@@ -370,11 +363,10 @@
 		8ACC8485197F943000B7058B /* scene2assets */ = {
 			isa = PBXGroup;
 			children = (
+				8ACC85391980AFFB00B7058B /* chicken.atlas */,
+				8ACC85371980AF9D00B7058B /* chicken@2x.png */,
 				8ACC84DB197FC3FF00B7058B /* barnbackwall@2x.png */,
 				8ACC84D8197FC3DC00B7058B /* s2foreground@2x.png */,
-				8ACC8488197F943000B7058B /* chicken.atlas */,
-				8ACC8489197F943000B7058B /* chicken.png */,
-				8ACC848A197F943000B7058B /* chicken@2x.png */,
 				8ACC848D197F943000B7058B /* egg.png */,
 				8ACC848E197F943000B7058B /* egg@2x.png */,
 				8ACC848F197F943000B7058B /* goodnight-chicken.png */,
@@ -386,24 +378,50 @@
 		8ACC8493197F943000B7058B /* scene3assets */ = {
 			isa = PBXGroup;
 			children = (
+				8ACC853F1980BA5E00B7058B /* sleepcow.atlas */,
+				8ACC85341980ABB300B7058B /* cow@2x.png */,
 				8ACC84DD197FC41100B7058B /* s3foreground@2x.png */,
 				8ACC84DE197FC41100B7058B /* s3nightsky@2x.png */,
-				8ACC8494197F943000B7058B /* cow@2x.png */,
 				8ACC8496197F943000B7058B /* goodnight-cow@2x.png */,
 				8ACC8497197F943000B7058B /* houselightsoff@2x.png */,
 				8ACC8498197F943000B7058B /* houselightson@2x.png */,
-				8ACC8499197F943000B7058B /* Scene3.png */,
-				8ACC849B197F943000B7058B /* sleepcow.atlas */,
 			);
 			path = scene3assets;
 			sourceTree = "<group>";
 		};
-		8ACC84E1197FC41C00B7058B /* scene4assets */ = {
+		8ACC85101980A94400B7058B /* soundassets */ = {
 			isa = PBXGroup;
 			children = (
-				8ACC84E2197FC41C00B7058B /* backtothestart@2x.png */,
-				8ACC84E3197FC41C00B7058B /* s4nightsky@2x.png */,
-				8ACC84E4197FC41C00B7058B /* theend@2x.png */,
+				8ACC85271980A9E200B7058B /* click.wav */,
+				8ACC85281980A9E200B7058B /* cow.wav */,
+				8ACC85291980A9E200B7058B /* lightswitch.wav */,
+				8ACC852A1980A9E200B7058B /* plop.wav */,
+				8ACC85151980A94400B7058B /* chicken.wav */,
+				8ACC85171980A94400B7058B /* monkey.wav */,
+				8ACC85191980A94400B7058B /* ting.wav */,
+				8ACC851A1980A94400B7058B /* ukulele.wav */,
+			);
+			path = soundassets;
+			sourceTree = "<group>";
+		};
+		8ACC854419876D1B00B7058B /* endsceneassets */ = {
+			isa = PBXGroup;
+			children = (
+				8ACC854519876D1B00B7058B /* backtothestart@2x.png */,
+				8ACC855819876EC600B7058B /* endnightsky@2x.png */,
+				8ACC854719876D1B00B7058B /* theend@2x.png */,
+			);
+			path = endsceneassets;
+			sourceTree = "<group>";
+		};
+		8ACC854B19876D4900B7058B /* scene4assets */ = {
+			isa = PBXGroup;
+			children = (
+				8ACC855619876D8F00B7058B /* sleepfish.atlas */,
+				8ACC854C19876D4900B7058B /* bubble@2x.png */,
+				8ACC854D19876D4900B7058B /* bubblepop@2x.png */,
+				8ACC854F19876D4900B7058B /* fish@2x.png */,
+				8ACC855019876D4900B7058B /* s4nightsky@2x.png */,
 			);
 			path = scene4assets;
 			sourceTree = "<group>";
@@ -484,68 +502,67 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ACC84E7197FC41C00B7058B /* theend@2x.png in Resources */,
-				8ACC84A7197F943000B7058B /* beginbutton@2x.png in Resources */,
-				8ACC84A6197F943000B7058B /* zzz.atlas in Resources */,
 				8ACC84D6197FC3CC00B7058B /* s0nightsky@2x.png in Resources */,
-				8ACC84AF197F943000B7058B /* leaves2.atlas in Resources */,
+				8ACC855719876D8F00B7058B /* sleepfish.atlas in Resources */,
 				8ACC84B5197F943000B7058B /* s1nightsky@2x.png in Resources */,
-				8ACC84BC197F943000B7058B /* chicken.png in Resources */,
+				8ACC855419876D4900B7058B /* fish@2x.png in Resources */,
+				8ACC85251980A94400B7058B /* ukulele.wav in Resources */,
 				8ACC84DC197FC3FF00B7058B /* barnbackwall@2x.png in Resources */,
 				8ACC84A5197F943000B7058B /* star@2x.png in Resources */,
 				8ACC84B2197F943000B7058B /* monkey.png in Resources */,
-				8ACC84BB197F943000B7058B /* chicken.atlas in Resources */,
-				8ACC8463197F93D000B7058B /* chicken-awake.mp3 in Resources */,
+				8ACC855119876D4900B7058B /* bubble@2x.png in Resources */,
 				8ACC84CA197F943000B7058B /* houselightson@2x.png in Resources */,
-				8ACC84BD197F943000B7058B /* chicken@2x.png in Resources */,
+				8ACC855219876D4900B7058B /* bubblepop@2x.png in Resources */,
 				8ACC849F197F943000B7058B /* moon@2x.png in Resources */,
+				8ACC852E1980A9E200B7058B /* plop.wav in Resources */,
 				8A134440196BA00900E6EE72 /* InfoPlist.strings in Resources */,
-				8ACC84E5197FC41C00B7058B /* backtothestart@2x.png in Resources */,
+				8ACC85381980AF9D00B7058B /* chicken@2x.png in Resources */,
 				8ACC84A9197F943000B7058B /* gigglemonkey.atlas in Resources */,
 				8ACC84B3197F943000B7058B /* monkey@2x.png in Resources */,
 				8ACC824C1974CD6100B7058B /* DimensionTest.png in Resources */,
+				8ACC85361980ABB300B7058B /* cow@2x.png in Resources */,
 				8ACC84C1197F943000B7058B /* egg@2x.png in Resources */,
 				8A134453196BA00900E6EE72 /* Images.xcassets in Resources */,
 				8ACC84AE197F943000B7058B /* leaves1@2x.png in Resources */,
-				8ACC84E6197FC41C00B7058B /* s4nightsky@2x.png in Resources */,
 				8ACC84C2197F943000B7058B /* goodnight-chicken.png in Resources */,
-				8ACC84CB197F943000B7058B /* Scene3.png in Resources */,
-				8ACC828719753AEC00B7058B /* yawntemp.mp3 in Resources */,
 				8ACC849C197F943000B7058B /* homebutton@2x.png in Resources */,
+				8ACC855519876D4900B7058B /* s4nightsky@2x.png in Resources */,
+				8ACC852B1980A9E200B7058B /* click.wav in Resources */,
 				8ACC84EB197FC53800B7058B /* previousscenetab@2x.png in Resources */,
 				8ACC84D5197FC3CC00B7058B /* gnst@2x.png in Resources */,
 				8ACC84B6197F943000B7058B /* sleepmonkey.atlas in Resources */,
 				8ACC84C9197F943000B7058B /* houselightsoff@2x.png in Resources */,
 				8ACC84DA197FC3DC00B7058B /* s2foreground@2x.png in Resources */,
+				8ACC854A19876D1B00B7058B /* theend@2x.png in Resources */,
 				8ACC84B4197F943000B7058B /* s1foreground@2x.png in Resources */,
-				8ACC8464197F93D000B7058B /* plop.mp3 in Resources */,
-				8ACC84B8197F943000B7058B /* zzz@2x.png in Resources */,
+				8ACC852C1980A9E200B7058B /* cow.wav in Resources */,
 				8ACC824A1974C9CD00B7058B /* DimensionTest@2x.png in Resources */,
 				8ACC84B1197F943000B7058B /* leaves2@2x.png in Resources */,
 				8ACC84C8197F943000B7058B /* goodnight-cow@2x.png in Resources */,
 				8ACC84AD197F943000B7058B /* leaves1.png in Resources */,
+				8ACC85401980BA5E00B7058B /* sleepcow.atlas in Resources */,
 				8ACC84A4197F943000B7058B /* star.png in Resources */,
-				8ACC82851975377100B7058B /* ukulele.wav in Resources */,
-				8A134478196BAB8300E6EE72 /* ting.wav in Resources */,
-				8ACC82841975377100B7058B /* monkey.wav in Resources */,
-				8ACC84CD197F943000B7058B /* sleepcow.atlas in Resources */,
 				8ACC84C0197F943000B7058B /* egg.png in Resources */,
 				8ACC84A0197F943000B7058B /* nextscene.png in Resources */,
-				8ACC84C6197F943000B7058B /* cow@2x.png in Resources */,
+				8ACC85221980A94400B7058B /* monkey.wav in Resources */,
 				8ACC84C3197F943000B7058B /* goodnight-chicken@2x.png in Resources */,
+				8ACC853A1980AFFB00B7058B /* chicken.atlas in Resources */,
+				8ACC855919876EC600B7058B /* endnightsky@2x.png in Resources */,
 				8ACC84DF197FC41100B7058B /* s3foreground@2x.png in Resources */,
 				8ACC849E197F943000B7058B /* moon.png in Resources */,
+				8ACC854819876D1B00B7058B /* backtothestart@2x.png in Resources */,
 				8ACC84E0197FC41100B7058B /* s3nightsky@2x.png in Resources */,
-				8ACC84B7197F943000B7058B /* zzz.png in Resources */,
-				8ACC8462197F93D000B7058B /* chicken-asleep.mp3 in Resources */,
 				8ACC84AA197F943000B7058B /* goodnightMonkeyText.png in Resources */,
-				8ACC84D4197FC3CC00B7058B /* beginbutton@2x.png in Resources */,
+				8ACC85241980A94400B7058B /* ting.wav in Resources */,
+				8ACC85201980A94400B7058B /* chicken.wav in Resources */,
 				8ACC849D197F943000B7058B /* moon.atlas in Resources */,
 				8ACC84A1197F943000B7058B /* nextscene@2x.png in Resources */,
 				8ACC84EA197FC53800B7058B /* nextscenetab@2x.png in Resources */,
 				8ACC84AB197F943000B7058B /* goodnightMonkeyText@2x.png in Resources */,
+				8ACC853C1980B76500B7058B /* letsbeginbutton@2x.png in Resources */,
 				8A134449196BA00900E6EE72 /* Main.storyboard in Resources */,
 				8ACC84B0197F943000B7058B /* leaves2.png in Resources */,
+				8ACC852D1980A9E200B7058B /* lightswitch.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +587,7 @@
 				8A134446196BA00900E6EE72 /* AppDelegate.m in Sources */,
 				8A134442196BA00900E6EE72 /* main.m in Sources */,
 				8ACC845E197F45BE00B7058B /* EndScene.m in Sources */,
+				8ACC854319876AB200B7058B /* Scene4.m in Sources */,
 				8ACC83FB197DEDBE00B7058B /* Scene3.m in Sources */,
 				8ACC82481974A41500B7058B /* Scene2.m in Sources */,
 			);
