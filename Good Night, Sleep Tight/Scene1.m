@@ -26,6 +26,7 @@
     SKSpriteNode *_btnMoon;
     SKSpriteNode *_btnLeaves1;
     SKSpriteNode *_btnLeaves2;
+    SKSpriteNode *_btnLeaves3;
     SKSpriteNode *_btnNightSky;
     AVAudioPlayer *_moonSound;
     AVAudioPlayer *_yawnSound;
@@ -43,7 +44,7 @@
         
         // add the night sky background
         _btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s1nightsky"];
-        _btnNightSky.position = CGPointMake(size.width/2, (size.height-220));
+        _btnNightSky.position = CGPointMake(size.width/2, (size.height-320));
         _btnNightSky.zPosition = DrawingOrderBackground;
         [self addChild:_btnNightSky];
         
@@ -55,7 +56,7 @@
         
         // add the animal
         _btnAnimal = [SKSpriteNode spriteNodeWithImageNamed:@"monkey"];
-        _btnAnimal.position = CGPointMake(250.0f,300.0f);
+        _btnAnimal.position = CGPointMake(240.0f,370.0f);
         _btnAnimal.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnAnimal];
         
@@ -66,16 +67,22 @@
         [self addChild:_btnMoon];
         
         // add the first leaves
-        _btnLeaves1 = [SKSpriteNode spriteNodeWithImageNamed:@"leaves1"];
-        _btnLeaves1.position = CGPointMake(200.0f,630.0f);
+        _btnLeaves1 = [SKSpriteNode spriteNodeWithImageNamed:@"s1leaves1"];
+        _btnLeaves1.position = CGPointMake(170.0f,660.0f);
         _btnLeaves1.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnLeaves1];
         
         // add the second leaves
-        _btnLeaves2 = [SKSpriteNode spriteNodeWithImageNamed:@"leaves2"];
-        _btnLeaves2.position = CGPointMake(880.0f,100.0f);
+        _btnLeaves2 = [SKSpriteNode spriteNodeWithImageNamed:@"s1leaves2"];
+        _btnLeaves2.position = CGPointMake(100.0f,140.0f);
         _btnLeaves2.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnLeaves2];
+        
+        // add the third leaves
+        _btnLeaves3 = [SKSpriteNode spriteNodeWithImageNamed:@"s1leaves3"];
+        _btnLeaves3.position = CGPointMake(900.0f,140.0f);
+        _btnLeaves3.zPosition = DrawingOrderOtherSprites;
+        [self addChild:_btnLeaves3];
 
         // add home button
         _btnHome = [SKSpriteNode spriteNodeWithImageNamed:@"homebutton"];
@@ -84,14 +91,14 @@
         [self addChild:_btnHome];
         
         // add previous scene button
-        _btnPrevScene = [SKSpriteNode spriteNodeWithImageNamed:@"previousscenetab"];
-        _btnPrevScene.position = CGPointMake(35.0f,220.0f);
-        _btnPrevScene.zPosition = DrawingOrderOtherSprites;
-        [self addChild:_btnPrevScene];
+        //_btnPrevScene = [SKSpriteNode spriteNodeWithImageNamed:@"previousscenetab"];
+        //_btnPrevScene.position = CGPointMake(35.0f,220.0f);
+        //_btnPrevScene.zPosition = DrawingOrderOtherSprites;
+        //[self addChild:_btnPrevScene];
         
         //add next scene button
         _btnNextScene = [SKSpriteNode spriteNodeWithImageNamed:@"nextscenetab"];
-        _btnNextScene.position = CGPointMake(990.0f,220.0f);
+        _btnNextScene.position = CGPointMake(990.0f,380.0f);
         _btnNextScene.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnNextScene];
         
@@ -135,15 +142,13 @@
     
     //add "good night, monkey" text
     SKSpriteNode *goodnightMonkey = [SKSpriteNode spriteNodeWithImageNamed:@"goodnightMonkeyText"];
-    goodnightMonkey.position = CGPointMake(340.0f, 55.0f);
+    goodnightMonkey.position = CGPointMake(495.0f, 55.0f);
     goodnightMonkey.zPosition = DrawingOrderOtherSprites;
     goodnightMonkey.alpha = 0.0;
     SKAction *fadeIn = [SKAction fadeAlphaTo:1.0 duration:2.0];
     [self addChild:goodnightMonkey];
     [goodnightMonkey runAction:fadeIn];
     
-
-
 }
 
 
@@ -167,6 +172,76 @@
     SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.15];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:6];
     [_btnMoon runAction:keepRepeatingAnimation];
+    
+}
+
+
+
+
+- (void)leaves1Touch
+{
+    
+    // get reference to the atlas
+    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"s1leaves1"];
+    // create an array to hold image textures
+    NSMutableArray *Textures = [NSMutableArray array];
+    
+    // load the animation frames from the TextureAtlas
+    int numImages = (int)Atlas.textureNames.count;
+    for (int i=1; i <= numImages; i++) {
+        NSString *textureName = [NSString stringWithFormat:@"s1leaves%02i", i];
+        SKTexture *SequenceTexture = [Atlas textureNamed:textureName];
+        [Textures addObject:SequenceTexture];
+        NSLog(@"%@",Textures); //show which image assets are being used.
+    }
+    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
+    SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
+    [_btnLeaves1 runAction:keepRepeatingAnimation];
+    
+}
+
+
+- (void)leaves2Touch
+{
+    
+    // get reference to the atlas
+    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"s1leaves2"];
+    // create an array to hold image textures
+    NSMutableArray *Textures = [NSMutableArray array];
+    
+    // load the animation frames from the TextureAtlas
+    int numImages = (int)Atlas.textureNames.count;
+    for (int i=1; i <= numImages; i++) {
+        NSString *textureName = [NSString stringWithFormat:@"s1reefplants%02i", i];
+        SKTexture *SequenceTexture = [Atlas textureNamed:textureName];
+        [Textures addObject:SequenceTexture];
+        NSLog(@"%@",Textures); //show which image assets are being used.
+    }
+    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.05];
+    SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
+    [_btnLeaves2 runAction:keepRepeatingAnimation];
+    
+}
+
+- (void)leaves3Touch
+{
+    
+    // get reference to the atlas
+    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"s1leaves3"];
+    // create an array to hold image textures
+    NSMutableArray *Textures = [NSMutableArray array];
+    
+    // load the animation frames from the TextureAtlas
+    int numImages = (int)Atlas.textureNames.count;
+    for (int i=1; i <= numImages; i++) {
+        NSString *textureName = [NSString stringWithFormat:@"s1colourfulleaves%02i", i];
+        SKTexture *SequenceTexture = [Atlas textureNamed:textureName];
+        [Textures addObject:SequenceTexture];
+        NSLog(@"%@",Textures); //show which image assets are being used.
+    }
+    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
+    SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:3];
+    [_btnLeaves3 runAction:keepRepeatingAnimation];
     
 }
 
@@ -214,21 +289,43 @@
             
         }
         
-        if([_btnHome containsPoint:location])
+        else if([_btnHome containsPoint:location])
         {
             NSLog(@"home button touch");
             [self changeToHome];
             
         }
         
+        else if([_btnLeaves1 containsPoint:location])
+        {
+            NSLog(@"leaves1 touch");
+            [self leaves1Touch];
+        }
+        
+        else if([_btnLeaves2 containsPoint:location])
+        {
+            NSLog(@"leaves2 touch");
+            [self leaves2Touch];
+        }
+        
+        else if([_btnLeaves3 containsPoint:location])
+        {
+            NSLog(@"leaves3 touch");
+            [self leaves3Touch];
+        }
         
         else if([_btnMoon containsPoint:location]) {
             NSLog(@"moon touch");
             [self moonTouch];
         }
-        else {
-            if([_btnNightSky containsPoint:location])
-            {
+        
+        else if([_btnNextScene containsPoint:location]) {
+            NSLog(@"next scene touch ends");
+            [self changeToNextScene];
+        }
+        
+        else if([_btnNightSky containsPoint:location]) {
+
                 NSLog(@"sky touch");
                 SKSpriteNode *nightstar = [SKSpriteNode spriteNodeWithImageNamed:@"star"];
                 nightstar.position = location;
@@ -236,7 +333,6 @@
                 [self addChild:nightstar];
                 SKAction *playSFX = [SKAction playSoundFileNamed:@"ting.wav" waitForCompletion:NO];
                 [self runAction:playSFX];
-            }
             
         }
         
@@ -246,20 +342,7 @@
 }
 
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches){
-        CGPoint location = [touch locationInNode:self];
-        
-        if([_btnNextScene containsPoint:location]) {
-            NSLog(@"next scene touch ends");
-            [self changeToNextScene];
-        }
-        if([_btnPrevScene containsPoint:location]) {
-            NSLog(@"prev scene touch ends");
-            [self changeToPrevScene];
-        }
-    }
-}
+
 
 
 
