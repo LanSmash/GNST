@@ -16,6 +16,9 @@
 #import <AVFoundation/AVFoundation.h>
 
 
+static const uint32_t bubbleCategory = 1;     //00000000000000000000000000000001
+static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
+
 
 @implementation Scene4 {
     
@@ -28,11 +31,24 @@
     SKSpriteNode *_btnHome;
     SKSpriteNode *_btnNightSky;
     SKSpriteNode *_btnBubble;
+    SKSpriteNode *rock;
     AVAudioPlayer *_yawnSound;
 }
 
 
-
+-(void)didBeginContact:(SKPhysicsContact *)contact{
+    
+    NSLog(@"boing");
+    
+    if (contact.bodyA.categoryBitMask == topEdgeCategory) {
+        NSLog(@"bodyA is the edge!");
+                SKAction *playSFX = [SKAction playSoundFileNamed:@"pop1temp.mp3" waitForCompletion:NO];
+                [self runAction:playSFX];
+        [contact.bodyB.node removeFromParent];
+    }
+    
+   
+}
 
 
 -(id)initWithSize:(CGSize)size {
@@ -93,10 +109,15 @@
         
         
         // sounds using the AVAudioPlayer so they can't be spammed
-        NSURL *yawnURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"cow" ofType:@"wav"]];
+        NSURL *yawnURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"gurgletemp" ofType:@"mp3"]];
         _yawnSound = [[AVAudioPlayer alloc] initWithContentsOfURL:yawnURL error:nil];
   
+        
+        [self addTopEdge:size];
+        
         self.physicsWorld.gravity = CGVectorMake( 0, +0.2 );
+        self.physicsWorld.contactDelegate = self;
+        
         
 
 
@@ -142,6 +163,8 @@
     [self addChild:goodnightMonkey];
     [goodnightMonkey runAction:fadeIn];
     
+
+    
 }
 
 
@@ -166,6 +189,8 @@
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnCoral1 runAction:keepRepeatingAnimation];
     
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"coraltemp.wav" waitForCompletion:NO];
+    [self runAction:playSFX];
 }
 
 
@@ -188,6 +213,9 @@
     SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnEel runAction:keepRepeatingAnimation];
+    
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"hehetemp.mp3" waitForCompletion:NO];
+    [self runAction:playSFX];
     
 }
 
@@ -212,23 +240,40 @@
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnCrab runAction:keepRepeatingAnimation];
     
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"scurrytemp.mp3" waitForCompletion:NO];
+    [self runAction:playSFX];
+    
 }
 
 
 - (void)addBubbles:(CGPoint)location  {
     _btnBubble = [SKSpriteNode spriteNodeWithImageNamed:@"bubble"];
-    _btnBubble.zPosition = DrawingOrderStars;
+    _btnBubble.zPosition = DrawingOrderBubbles;
     _btnBubble.position = location;
     _btnBubble.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:_btnBubble.frame.size.width/2];
-
+    _btnBubble.physicsBody.categoryBitMask = bubbleCategory;
+    _btnBubble.physicsBody.contactTestBitMask = topEdgeCategory;
+    
 
     [self addChild:_btnBubble];
-    //sound
-    SKAction *playSFX = [SKAction playSoundFileNamed:@"ting.wav" waitForCompletion:NO];
+    
+    
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"bubblestemp.mp3" waitForCompletion:NO];
     [self runAction:playSFX];
 }
 
 
+-(void) addTopEdge:(CGSize) size {
+    SKNode *topEdge = [SKNode node];
+    topEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0,720) toPoint:CGPointMake(size.width, 720)];
+    topEdge.physicsBody.categoryBitMask = topEdgeCategory;
+    [self addChild:topEdge];
+}
+
+//- (void)popBubbles:(CGPoint)location {
+//    [_btnBubble setTexture:[SKTexture textureWithImageNamed:@"bubblepop"]];
+//    [_btnBubble removeFromParent];
+//}
 
 
 - (void)changeToHome
@@ -287,11 +332,7 @@
             [self crabTouch];
         }
         
-        else if ([_btnBubble containsPoint:location]) {
-            [_btnBubble setTexture:[SKTexture textureWithImageNamed:@"bubblepop"]];
-            NSLog(@"bubble touch");
-            //[self removeFromParent];
-        }
+
         
         else if([_btnNextScene containsPoint:location]) {
             NSLog(@"next scene touch");
@@ -303,10 +344,19 @@
             [self changeToHome];
         }
         
+//        else if ([_btnBubble containsPoint:location]) {
+//            NSLog(@"bubble touch");
+//            [self popBubbles:location];
+//        }
+        
         else if ([_btnNightSky containsPoint:location]) {
           NSLog(@"sky touch");
           [self addBubbles:location];
-        }       
+        }
+        
+
+        
+
     }
 }
 
@@ -316,9 +366,7 @@
 
 
 
-//- (void)popBubbles {
-//    _btnBubble setTexture:[SKTexture textureWithImageNamed:@"bubblepop"];
-//}
+
 
 
 

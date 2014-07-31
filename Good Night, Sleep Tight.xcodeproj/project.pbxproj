@@ -95,6 +95,15 @@
 		8A7DFC9A1989B504000C3976 /* plop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFC521989B504000C3976 /* plop.wav */; };
 		8A7DFC9B1989B504000C3976 /* ting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFC531989B504000C3976 /* ting.wav */; };
 		8A7DFC9C1989B504000C3976 /* ukulele.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFC541989B504000C3976 /* ukulele.wav */; };
+		8A7DFCF4198A02B2000C3976 /* bubblestemp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFCEB198A02B2000C3976 /* bubblestemp.mp3 */; };
+		8A7DFCF5198A02B2000C3976 /* butterflytemp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFCEC198A02B2000C3976 /* butterflytemp.mp3 */; };
+		8A7DFCF6198A02B2000C3976 /* gurgletemp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFCED198A02B2000C3976 /* gurgletemp.mp3 */; };
+		8A7DFCF7198A02B2000C3976 /* hehetemp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFCEE198A02B2000C3976 /* hehetemp.mp3 */; };
+		8A7DFCF8198A02B2000C3976 /* hisstemp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFCEF198A02B2000C3976 /* hisstemp.mp3 */; };
+		8A7DFCF9198A02B2000C3976 /* pop1temp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFCF0198A02B2000C3976 /* pop1temp.mp3 */; };
+		8A7DFCFA198A02B2000C3976 /* scurrytemp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFCF1198A02B2000C3976 /* scurrytemp.mp3 */; };
+		8A7DFCFB198A02B2000C3976 /* tingtemp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFCF2198A02B2000C3976 /* tingtemp.mp3 */; };
+		8A7DFCFC198A02B2000C3976 /* coraltemp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8A7DFCF3198A02B2000C3976 /* coraltemp.wav */; };
 		8ACC82481974A41500B7058B /* Scene2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC82471974A41500B7058B /* Scene2.m */; };
 		8ACC824A1974C9CD00B7058B /* DimensionTest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC82491974C9CD00B7058B /* DimensionTest@2x.png */; };
 		8ACC824C1974CD6100B7058B /* DimensionTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC824B1974CD6100B7058B /* DimensionTest.png */; };
@@ -209,6 +218,15 @@
 		8A7DFC521989B504000C3976 /* plop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = plop.wav; sourceTree = "<group>"; };
 		8A7DFC531989B504000C3976 /* ting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ting.wav; sourceTree = "<group>"; };
 		8A7DFC541989B504000C3976 /* ukulele.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ukulele.wav; sourceTree = "<group>"; };
+		8A7DFCEB198A02B2000C3976 /* bubblestemp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubblestemp.mp3; sourceTree = "<group>"; };
+		8A7DFCEC198A02B2000C3976 /* butterflytemp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = butterflytemp.mp3; sourceTree = "<group>"; };
+		8A7DFCED198A02B2000C3976 /* gurgletemp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gurgletemp.mp3; sourceTree = "<group>"; };
+		8A7DFCEE198A02B2000C3976 /* hehetemp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hehetemp.mp3; sourceTree = "<group>"; };
+		8A7DFCEF198A02B2000C3976 /* hisstemp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hisstemp.mp3; sourceTree = "<group>"; };
+		8A7DFCF0198A02B2000C3976 /* pop1temp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop1temp.mp3; sourceTree = "<group>"; };
+		8A7DFCF1198A02B2000C3976 /* scurrytemp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scurrytemp.mp3; sourceTree = "<group>"; };
+		8A7DFCF2198A02B2000C3976 /* tingtemp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tingtemp.mp3; sourceTree = "<group>"; };
+		8A7DFCF3198A02B2000C3976 /* coraltemp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coraltemp.wav; sourceTree = "<group>"; };
 		8ACC82461974A41500B7058B /* Scene2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene2.h; sourceTree = "<group>"; };
 		8ACC82471974A41500B7058B /* Scene2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene2.m; sourceTree = "<group>"; };
 		8ACC82491974C9CD00B7058B /* DimensionTest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DimensionTest@2x.png"; path = "Good Night, Sleep Tight/DimensionTest@2x.png"; sourceTree = "<group>"; };
@@ -454,6 +472,15 @@
 		8A7DFC4C1989B504000C3976 /* soundassets */ = {
 			isa = PBXGroup;
 			children = (
+				8A7DFCEB198A02B2000C3976 /* bubblestemp.mp3 */,
+				8A7DFCEC198A02B2000C3976 /* butterflytemp.mp3 */,
+				8A7DFCED198A02B2000C3976 /* gurgletemp.mp3 */,
+				8A7DFCEE198A02B2000C3976 /* hehetemp.mp3 */,
+				8A7DFCEF198A02B2000C3976 /* hisstemp.mp3 */,
+				8A7DFCF0198A02B2000C3976 /* pop1temp.mp3 */,
+				8A7DFCF1198A02B2000C3976 /* scurrytemp.mp3 */,
+				8A7DFCF2198A02B2000C3976 /* tingtemp.mp3 */,
+				8A7DFCF3198A02B2000C3976 /* coraltemp.wav */,
 				8A7DFC4D1989B504000C3976 /* chicken.wav */,
 				8A7DFC4E1989B504000C3976 /* click.wav */,
 				8A7DFC4F1989B504000C3976 /* cow.wav */,
@@ -544,12 +571,15 @@
 			files = (
 				8A7DFC5B1989B504000C3976 /* s0characters-s2@2x.png in Resources */,
 				8A7DFC8B1989B504000C3976 /* coral1.atlas in Resources */,
+				8A7DFCF9198A02B2000C3976 /* pop1temp.mp3 in Resources */,
 				8A7DFC951989B504000C3976 /* chicken.wav in Resources */,
 				8A7DFC8F1989B504000C3976 /* eel.atlas in Resources */,
 				8A7DFC901989B504000C3976 /* eel@2x.png in Resources */,
+				8A7DFCFB198A02B2000C3976 /* tingtemp.mp3 in Resources */,
 				8A7DFC621989B504000C3976 /* monkey.png in Resources */,
 				8A7DFC821989B504000C3976 /* houselightson@2x.png in Resources */,
 				8A7DFC5A1989B504000C3976 /* s0characters-s1@2x.png in Resources */,
+				8A7DFCF6198A02B2000C3976 /* gurgletemp.mp3 in Resources */,
 				8A7DFC761989B504000C3976 /* goodnight-chicken@2x.png in Resources */,
 				8A7DFC6D1989B504000C3976 /* s1nightsky@2x.png in Resources */,
 				8A7DFC9B1989B504000C3976 /* ting.wav in Resources */,
@@ -558,14 +588,17 @@
 				8A134440196BA00900E6EE72 /* InfoPlist.strings in Resources */,
 				8A7DFC7A1989B504000C3976 /* apple@2x.png in Resources */,
 				8A7DFC6F1989B504000C3976 /* barnbackwall.png in Resources */,
+				8A7DFCFA198A02B2000C3976 /* scurrytemp.mp3 in Resources */,
 				8A7DFC631989B504000C3976 /* monkey@2x.png in Resources */,
 				8ACC824C1974CD6100B7058B /* DimensionTest.png in Resources */,
+				8A7DFCFC198A02B2000C3976 /* coraltemp.wav in Resources */,
 				8A7DFC6E1989B504000C3976 /* sleepmonkey.atlas in Resources */,
 				8A7DFC8D1989B504000C3976 /* crab.atlas in Resources */,
 				8A7DFC781989B504000C3976 /* s2foreground@2x.png in Resources */,
 				8A7DFC811989B504000C3976 /* houselightson.png in Resources */,
 				8A7DFC8A1989B504000C3976 /* bubblepop@2x.png in Resources */,
 				8A7DFC7C1989B504000C3976 /* cow@2x.png in Resources */,
+				8A7DFCF5198A02B2000C3976 /* butterflytemp.mp3 in Resources */,
 				8A7DFC6B1989B504000C3976 /* s1leaves3@2x.png in Resources */,
 				8A7DFC651989B504000C3976 /* s1foreground@2x.png in Resources */,
 				8A7DFC661989B504000C3976 /* s1leaves1.atlas in Resources */,
@@ -587,6 +620,7 @@
 				8A7DFC871989B504000C3976 /* s3treetop@2x.png in Resources */,
 				8A7DFC711989B504000C3976 /* chicken.png in Resources */,
 				8A7DFC911989B504000C3976 /* fish@2x.png in Resources */,
+				8A7DFCF8198A02B2000C3976 /* hisstemp.mp3 in Resources */,
 				8A7DFC601989B504000C3976 /* goodnightMonkeyText.png in Resources */,
 				8A7DFC731989B504000C3976 /* egg.png in Resources */,
 				8A7DFC6A1989B504000C3976 /* s1leaves3.atlas in Resources */,
@@ -596,6 +630,7 @@
 				8A7DFC571989B504000C3976 /* theend@2x.png in Resources */,
 				8A7DFC931989B504000C3976 /* s4nightsky@2x.png in Resources */,
 				8A7DFC7F1989B504000C3976 /* houselightsoff.png in Resources */,
+				8A7DFCF7198A02B2000C3976 /* hehetemp.mp3 in Resources */,
 				8A7DFC5E1989B504000C3976 /* s0nightsky.png in Resources */,
 				8A7DFC8C1989B504000C3976 /* coral1@2x.png in Resources */,
 				8A7DFC771989B504000C3976 /* s2foreground.png in Resources */,
@@ -614,6 +649,7 @@
 				8A134449196BA00900E6EE72 /* Main.storyboard in Resources */,
 				8A7DFC921989B504000C3976 /* goodnight-fish@2x.png in Resources */,
 				8A7DFC741989B504000C3976 /* egg@2x.png in Resources */,
+				8A7DFCF4198A02B2000C3976 /* bubblestemp.mp3 in Resources */,
 				8A7DFC611989B504000C3976 /* goodnightMonkeyText@2x.png in Resources */,
 				8A7DFC891989B504000C3976 /* bubble@2x.png in Resources */,
 				8A7DFC9C1989B504000C3976 /* ukulele.wav in Resources */,

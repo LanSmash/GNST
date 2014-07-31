@@ -9,7 +9,8 @@ typedef NS_ENUM(NSInteger, DrawingOrder) {
     DrawingOrderStars,
     DrawingOrderForeground,
     DrawingOrderOtherSprites,
-    DrawingOrderUIElements
+    DrawingOrderBubbles,
+    DrawingOrderUIElements,
 };
 
 #endif

@@ -197,6 +197,8 @@
     SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.15];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnLeaves1 runAction:keepRepeatingAnimation];
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"hisstemp.mp3" waitForCompletion:NO];
+    [self runAction:playSFX];
     
 }
 
@@ -220,6 +222,8 @@
     SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnLeaves2 runAction:keepRepeatingAnimation];
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"tingtemp.mp3" waitForCompletion:NO];
+    [self runAction:playSFX];
     
 }
 
@@ -242,7 +246,8 @@
     SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:3];
     [_btnLeaves3 runAction:keepRepeatingAnimation];
-    
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"butterflytemp.mp3" waitForCompletion:NO];
+    [self runAction:playSFX];
 }
 
 
