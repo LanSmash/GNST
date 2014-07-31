@@ -20,6 +20,7 @@
 @implementation Scene3 {
     
     SKSpriteNode *_btnAnimal;
+    SKSpriteNode *_btnTree;
     SKSpriteNode *_btnNextScene;
     SKSpriteNode *_btnPrevScene;
     SKSpriteNode *_btnHome;
@@ -60,6 +61,13 @@
         _HouseLightsOn = YES;
         [self addChild:_btnHouse];
         
+        // add the tree top
+        _btnTree = [SKSpriteNode spriteNodeWithImageNamed:@"s3treetop"];
+        _btnTree.position = CGPointMake(830.0f,500.0f);
+        _btnTree.zPosition = DrawingOrderOtherSprites;
+        [self addChild:_btnTree];
+        
+        
         // add the animal
         _btnAnimal = [SKSpriteNode spriteNodeWithImageNamed:@"cow"];
         _btnAnimal.position = CGPointMake(650.0f,180.0f);
@@ -96,7 +104,8 @@
         _moonSound = [[AVAudioPlayer alloc] initWithContentsOfURL:moonURL error:nil];
         NSURL *yawnURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"cow" ofType:@"wav"]];
         _yawnSound = [[AVAudioPlayer alloc] initWithContentsOfURL:yawnURL error:nil];
-        
+
+        [self addAppleContainer:size];
         
     }
     return self;
@@ -170,6 +179,21 @@
 }
 
 
+-(void) addAppleContainer:(CGSize)size {
+    
+    SKNode *bottomEdgeSlope1 = [SKNode node];
+    bottomEdgeSlope1.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0,20) toPoint:CGPointMake(820, 70)];
+    SKNode *bottomEdgeSlope2 = [SKNode node];
+    bottomEdgeSlope2.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(820,70) toPoint:CGPointMake(size.width, 40)];
+
+    [self addChild:bottomEdgeSlope1];
+        [self addChild:bottomEdgeSlope2];
+
+}
+
+
+
+
 - (void)changeToHome
 {
     SKAction *playSFX = [SKAction playSoundFileNamed:@"click.wav" waitForCompletion:NO];
@@ -215,7 +239,7 @@
             
         }
         
-        if([_btnHouse containsPoint:location]) {
+        else if([_btnHouse containsPoint:location]) {
             NSLog(@"house touch");
             if (_HouseLightsOn == YES) {
                 [_btnHouse setTexture:[SKTexture textureWithImageNamed:@"houselightsoff"]];
@@ -232,19 +256,33 @@
 
         }
         
-        if([_btnHome containsPoint:location])
+        else if([_btnHome containsPoint:location])
         {
             NSLog(@"home button touch");
             [self changeToHome];
             
         }
         
-        if([_btnMoon containsPoint:location]) {
+        else if([_btnMoon containsPoint:location]) {
             NSLog(@"moon touch");
             [self moonTouch];
         }
-        else {
-            if([_btnNightSky containsPoint:location])
+        
+        else if([_btnTree containsPoint:location])
+        {
+            NSLog(@"tree touch");
+            SKSpriteNode *apple = [SKSpriteNode spriteNodeWithImageNamed:@"apple"];
+            apple.position = location;
+            apple.zPosition = DrawingOrderOtherSprites;
+            //add a physics body
+            apple.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:apple.frame.size.width/2];
+            [self addChild:apple];
+            SKAction *playSFX = [SKAction playSoundFileNamed:@"plop.wav" waitForCompletion:NO];
+            [self runAction:playSFX];
+            
+        }
+        
+        else if ([_btnNightSky containsPoint:location])
             {
                 NSLog(@"sky touch");
                 SKSpriteNode *nightstar = [SKSpriteNode spriteNodeWithImageNamed:@"star"];
@@ -254,12 +292,12 @@
                 SKAction *playSFX = [SKAction playSoundFileNamed:@"ting.wav" waitForCompletion:NO];
                 [self runAction:playSFX];
             }
-            
-        }
         
-        
-    }
+
     
+    
+    }
+
 }
 
 

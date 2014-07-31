@@ -20,6 +20,7 @@
 @implementation Scene4 {
     
     SKSpriteNode *_btnAnimal;
+    SKSpriteNode *_btnCoral1;
     SKSpriteNode *_btnEel;
     SKSpriteNode *_btnCrab;
     SKSpriteNode *_btnNextScene;
@@ -52,6 +53,12 @@
         _btnAnimal.position = CGPointMake(670.0f,330.0f);
         _btnAnimal.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnAnimal];
+
+        // add the coral
+        _btnCoral1 = [SKSpriteNode spriteNodeWithImageNamed:@"coral1"];
+        _btnCoral1.position = CGPointMake(358.0f,215.0f);
+        _btnCoral1.zPosition = DrawingOrderOtherSprites;
+        [self addChild:_btnCoral1];
         
         // add the eel
         _btnEel = [SKSpriteNode spriteNodeWithImageNamed:@"eel"];
@@ -137,6 +144,29 @@
     
 }
 
+
+
+- (void)coralTouch
+{
+    
+    // get reference to the atlas
+    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"coral1"];
+    // create an array to hold image textures
+    NSMutableArray *Textures = [NSMutableArray array];
+    
+    // load the animation frames from the TextureAtlas
+    int numImages = (int)Atlas.textureNames.count;
+    for (int i=1; i <= numImages; i++) {
+        NSString *textureName = [NSString stringWithFormat:@"coral%02i", i];
+        SKTexture *SequenceTexture = [Atlas textureNamed:textureName];
+        [Textures addObject:SequenceTexture];
+        NSLog(@"%@",Textures); //show which image assets are being used.
+    }
+    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
+    SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
+    [_btnCoral1 runAction:keepRepeatingAnimation];
+    
+}
 
 
 - (void)eelTouch
@@ -240,6 +270,12 @@
             [self sleepAnimal];
         
         }
+        
+        else if ([_btnCoral1 containsPoint:location]) {
+            NSLog(@"coral touch");
+            [self coralTouch];
+        }
+        
         
         else if ([_btnEel containsPoint:location]) {
             NSLog(@"eel touch");

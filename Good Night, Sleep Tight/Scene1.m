@@ -194,7 +194,7 @@
         [Textures addObject:SequenceTexture];
         NSLog(@"%@",Textures); //show which image assets are being used.
     }
-    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
+    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.15];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnLeaves1 runAction:keepRepeatingAnimation];
     
@@ -217,7 +217,7 @@
         [Textures addObject:SequenceTexture];
         NSLog(@"%@",Textures); //show which image assets are being used.
     }
-    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.05];
+    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnLeaves2 runAction:keepRepeatingAnimation];
     

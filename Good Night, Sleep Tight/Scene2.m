@@ -41,7 +41,7 @@
         
         // add the barn background
         _btnBarnBackWall = [SKSpriteNode spriteNodeWithImageNamed:@"barnbackwall"];
-        _btnBarnBackWall.position = CGPointMake(526.0f,300.0f);
+        _btnBarnBackWall.position = CGPointMake(527.0f,300.0f);
         _btnBarnBackWall.zPosition = DrawingOrderBackground;
         [self addChild:_btnBarnBackWall];
     
@@ -104,7 +104,7 @@
     [_yawnSound play];
     
     // get reference to the atlas
-    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"chicken"];
+    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"sleepchicken"];
     // create an array to hold image textures
     NSMutableArray *Textures = [NSMutableArray array];
     
