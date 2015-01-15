@@ -56,7 +56,7 @@
         
         // add the animal
         _btnAnimal = [SKSpriteNode spriteNodeWithImageNamed:@"monkey"];
-        _btnAnimal.position = CGPointMake(240.0f,370.0f);
+        _btnAnimal.position = CGPointMake(230.0f,370.0f);
         _btnAnimal.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnAnimal];
         
@@ -122,20 +122,21 @@
 {
     [_yawnSound play];
     
+
     // get reference to the atlas
-    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"gigglemonkey"];
+    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"sleepmonkey"];
     // create an array to hold image textures
     NSMutableArray *Textures = [NSMutableArray array];
     
     // load the animation frames from the TextureAtlas
     int numImages = (int)Atlas.textureNames.count;
     for (int i=1; i <= numImages; i++) {
-        NSString *textureName = [NSString stringWithFormat:@"monkey%i", i];
+        NSString *textureName = [NSString stringWithFormat:@"monkey%02i", i];
         SKTexture *SequenceTexture = [Atlas textureNamed:textureName];
         [Textures addObject:SequenceTexture];
         NSLog(@"%@",Textures); //show which image assets are being used.
     }
-    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
+    SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.2];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnAnimal runAction:keepRepeatingAnimation];
     
@@ -197,7 +198,7 @@
     SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.15];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnLeaves1 runAction:keepRepeatingAnimation];
-    SKAction *playSFX = [SKAction playSoundFileNamed:@"hisstemp.mp3" waitForCompletion:NO];
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"hiss.wav" waitForCompletion:NO];
     [self runAction:playSFX];
     
 }
@@ -222,7 +223,7 @@
     SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnLeaves2 runAction:keepRepeatingAnimation];
-    SKAction *playSFX = [SKAction playSoundFileNamed:@"tingtemp.mp3" waitForCompletion:NO];
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"bellhit.wav" waitForCompletion:NO];
     [self runAction:playSFX];
     
 }
@@ -246,7 +247,7 @@
     SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:3];
     [_btnLeaves3 runAction:keepRepeatingAnimation];
-    SKAction *playSFX = [SKAction playSoundFileNamed:@"butterflytemp.mp3" waitForCompletion:NO];
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"butterfly.wav" waitForCompletion:NO];
     [self runAction:playSFX];
 }
 

@@ -57,19 +57,19 @@
       
         // add scene buttons
         _btnScene1 = [SKSpriteNode spriteNodeWithImageNamed:@"s0characters-s1"];
-        _btnScene1.position = CGPointMake(140, 210.0f);
+        _btnScene1.position = CGPointMake(140, 150.0f);
         _btnScene1.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnScene1];
         _btnScene2 = [SKSpriteNode spriteNodeWithImageNamed:@"s0characters-s2"];
-        _btnScene2.position = CGPointMake(390, 210.0f);
+        _btnScene2.position = CGPointMake(390, 150.0f);
         _btnScene2.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnScene2];
         _btnScene3 = [SKSpriteNode spriteNodeWithImageNamed:@"s0characters-s3"];
-        _btnScene3.position = CGPointMake(640, 210.0f);
+        _btnScene3.position = CGPointMake(640, 150.0f);
         _btnScene3.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnScene3];
         _btnScene4 = [SKSpriteNode spriteNodeWithImageNamed:@"s0characters-s4"];
-        _btnScene4.position = CGPointMake(890, 210.0f);
+        _btnScene4.position = CGPointMake(890, 150.0f);
         _btnScene4.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnScene4];
         
@@ -77,7 +77,16 @@
         // sounds using the AVAudioPlayer so they can't be spammed
         NSURL *moonURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ukulele" ofType:@"wav"]];
         _moonSound = [[AVAudioPlayer alloc] initWithContentsOfURL:moonURL error:nil];
+
         
+        //add "good night, monkey" text
+        SKSpriteNode *goodnightIntro = [SKSpriteNode spriteNodeWithImageNamed:@"gnst"];
+        goodnightIntro.position = CGPointMake(495.0f, 680.0f);
+        goodnightIntro.zPosition = DrawingOrderOtherSprites;
+        goodnightIntro.alpha = 0.0;
+        SKAction *fadeIn = [SKAction fadeAlphaTo:1.0 duration:2.0];
+        [self addChild:goodnightIntro];
+        [goodnightIntro runAction:fadeIn];
         
     }
     return self;

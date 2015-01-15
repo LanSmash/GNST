@@ -33,6 +33,9 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
     SKSpriteNode *_btnBubble;
     SKSpriteNode *rock;
     AVAudioPlayer *_yawnSound;
+    AVAudioPlayer *_crabSound;
+    AVAudioPlayer *_coralSound;
+    AVAudioPlayer *_giggleSound;
 }
 
 
@@ -109,9 +112,20 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
         
         
         // sounds using the AVAudioPlayer so they can't be spammed
-        NSURL *yawnURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"gurgletemp" ofType:@"mp3"]];
+        NSURL *yawnURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"fishsleep" ofType:@"wav"]];
         _yawnSound = [[AVAudioPlayer alloc] initWithContentsOfURL:yawnURL error:nil];
+        
+        
+        NSURL *crabURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"crab" ofType:@"wav"]];
+        _crabSound = [[AVAudioPlayer alloc] initWithContentsOfURL:crabURL error:nil];
   
+        
+        NSURL *coralURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"coralglow" ofType:@"wav"]];
+        _coralSound = [[AVAudioPlayer alloc] initWithContentsOfURL:coralURL error:nil];
+        
+        
+        NSURL *giggleURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"giggle" ofType:@"wav"]];
+        _giggleSound = [[AVAudioPlayer alloc] initWithContentsOfURL:giggleURL error:nil];
         
         [self addTopEdge:size];
         
@@ -171,6 +185,7 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
 
 - (void)coralTouch
 {
+    [_coralSound play];
     
     // get reference to the atlas
     SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"coral1"];
@@ -186,16 +201,16 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
         NSLog(@"%@",Textures); //show which image assets are being used.
     }
     SKAction *repeatAnimation = [SKAction animateWithTextures:Textures timePerFrame:0.1];
-    SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
+    SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:3];
     [_btnCoral1 runAction:keepRepeatingAnimation];
     
-    SKAction *playSFX = [SKAction playSoundFileNamed:@"coraltemp.wav" waitForCompletion:NO];
-    [self runAction:playSFX];
+
 }
 
 
 - (void)eelTouch
 {
+    [_giggleSound play];
     
     // get reference to the atlas
     SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"eel"];
@@ -214,14 +229,14 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnEel runAction:keepRepeatingAnimation];
     
-    SKAction *playSFX = [SKAction playSoundFileNamed:@"hehetemp.mp3" waitForCompletion:NO];
-    [self runAction:playSFX];
+
     
 }
 
 
 - (void)crabTouch
 {
+    [_crabSound play];
     
     // get reference to the atlas
     SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"crab"];
@@ -240,8 +255,7 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
     SKAction *keepRepeatingAnimation = [SKAction repeatAction:repeatAnimation count:1];
     [_btnCrab runAction:keepRepeatingAnimation];
     
-    SKAction *playSFX = [SKAction playSoundFileNamed:@"scurrytemp.mp3" waitForCompletion:NO];
-    [self runAction:playSFX];
+
     
 }
 

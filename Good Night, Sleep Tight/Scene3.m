@@ -277,7 +277,7 @@
             //add a physics body
             apple.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:apple.frame.size.width/2];
             [self addChild:apple];
-            SKAction *playSFX = [SKAction playSoundFileNamed:@"plop.wav" waitForCompletion:NO];
+            SKAction *playSFX = [SKAction playSoundFileNamed:@"apple.wav" waitForCompletion:NO];
             [self runAction:playSFX];
             
         }

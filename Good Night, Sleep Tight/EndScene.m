@@ -111,7 +111,7 @@
 {
     SKAction *playSFX = [SKAction playSoundFileNamed:@"click.wav" waitForCompletion:NO];
     [self runAction:playSFX];
-    Scene1 *secondScene = [Scene1 sceneWithSize:self.size];
+    MyScene *secondScene = [MyScene sceneWithSize:self.size];
     [self.view presentScene:secondScene transition:[SKTransition fadeWithDuration:0.5]];
 }
 
