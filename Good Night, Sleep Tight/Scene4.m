@@ -24,6 +24,7 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
     
     SKSpriteNode *_btnAnimal;
     SKSpriteNode *_btnCoral1;
+    SKSpriteNode *_btnNewCoral;
     SKSpriteNode *_btnEel;
     SKSpriteNode *_btnCrab;
     SKSpriteNode *_btnNextScene;
@@ -58,55 +59,104 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        //give dimension output in console
+        float boundsWidth = [UIScreen mainScreen].bounds.size.width;
+        float boundsHeight = [UIScreen mainScreen].bounds.size.height;
+        float scalefactor = [UIScreen mainScreen].scale;
+        NSLog(@"bounds width: %f, bounds height: %f", boundsWidth, boundsHeight);
+        NSLog(@"In initWithSize at %.0f wide and %.0f high", size.width, size.height);
+        NSLog(@"scale is: %f", scalefactor);
+        
+        
+        
+        
         
         
         // add the night sky background
-        _btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s4nightsky"];
+        if (boundsWidth == 568) {_btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s4nightsky568"]; }
+        else {_btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s4nightsky"]; }
         _btnNightSky.position = CGPointMake(size.width/2, (size.height/2));
+        if (boundsWidth == 480) {_btnNightSky.position = CGPointMake(size.width/2, (size.height/2)); }
+        if (boundsWidth == 568) {_btnNightSky.position = CGPointMake(size.width/2, (size.height/2)); }
         _btnNightSky.zPosition = DrawingOrderBackground;
         [self addChild:_btnNightSky];
         
         
+        
+        
+        
+        
+        
         // add the animal
         _btnAnimal = [SKSpriteNode spriteNodeWithImageNamed:@"fish"];
-        _btnAnimal.position = CGPointMake(670.0f,330.0f);
+        _btnAnimal.position = CGPointMake(670, 330);
+        if (boundsWidth == 480) {_btnAnimal.position = CGPointMake(320, 150); }
+        if (boundsWidth == 568) {_btnAnimal.position = CGPointMake(380, 120); }
         _btnAnimal.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnAnimal];
+        
+        
 
         // add the coral
         _btnCoral1 = [SKSpriteNode spriteNodeWithImageNamed:@"coral1"];
-        _btnCoral1.position = CGPointMake(358.0f,215.0f);
+        _btnCoral1.position = CGPointMake(358, 215);
+        if (boundsWidth == 480) {_btnCoral1.position = CGPointMake(168, 100); }
+        if (boundsWidth == 568) {_btnCoral1.position = CGPointMake(219, 58); }
         _btnCoral1.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnCoral1];
         
+        
+        
+        
+        // add the new coral just for iphone5, iphone6 and iphone6plus
+        if (boundsWidth == 568) {
+            _btnNewCoral = [SKSpriteNode spriteNodeWithImageNamed:@"newcoral568"];
+            _btnNewCoral.position = CGPointMake(175, 30);
+            _btnNewCoral.zPosition = DrawingOrderOtherSprites;
+            [self addChild:_btnNewCoral];
+        }
+        
+        
+        
+        
         // add the eel
         _btnEel = [SKSpriteNode spriteNodeWithImageNamed:@"eel"];
-        _btnEel.position = CGPointMake(110.0f,50.0f);
+        _btnEel.position = CGPointMake(110, 50);
+        if (boundsWidth == 480) {_btnEel.position = CGPointMake(50, 20); }
+        if (boundsWidth == 568) {_btnEel.position = CGPointMake(50, 30); }
         _btnEel.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnEel];
         
         // add the crab
         _btnCrab = [SKSpriteNode spriteNodeWithImageNamed:@"crab"];
-        _btnCrab.position = CGPointMake(810.0f,180.0f);
+        _btnCrab.position = CGPointMake(810, 180);
+        if (boundsWidth == 480) {_btnCrab.position = CGPointMake(370, 70); }
+        if (boundsWidth == 568) {_btnCrab.position = CGPointMake(450, 40); }
         _btnCrab.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnCrab];
         
         
         // add home button
         _btnHome = [SKSpriteNode spriteNodeWithImageNamed:@"homebutton"];
-        _btnHome.position = CGPointMake(930.0f,740.0f);
+        _btnHome.position = CGPointMake(930, 740);
+        if (boundsWidth == 480) {_btnHome.position = CGPointMake(440, 305); }
+        if (boundsWidth == 568) {_btnHome.position = CGPointMake(515, 305); }
         _btnHome.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnHome];
         
         // add previous scene button
-        //_btnPrevScene = [SKSpriteNode spriteNodeWithImageNamed:@"previousscenetab"];
-        //_btnPrevScene.position = CGPointMake(35.0f,220.0f);
-        //_btnPrevScene.zPosition = DrawingOrderOtherSprites;
-        //[self addChild:_btnPrevScene];
+        _btnPrevScene = [SKSpriteNode spriteNodeWithImageNamed:@"previousscenetab"];
+        _btnPrevScene.position = CGPointMake(35, 250);
+        if (boundsWidth == 480) {_btnPrevScene.position = CGPointMake(15, 110); }
+        if (boundsWidth == 568) {_btnPrevScene.position = CGPointMake(15, 110); }
+        _btnPrevScene.zPosition = DrawingOrderOtherSprites;
+        [self addChild:_btnPrevScene];
         
         //add next scene button
         _btnNextScene = [SKSpriteNode spriteNodeWithImageNamed:@"nextscenetab"];
-        _btnNextScene.position = CGPointMake(990.0f,280.0f);
+        _btnNextScene.position = CGPointMake(990, 250);
+        if (boundsWidth == 480) {_btnNextScene.position = CGPointMake(465, 110); }
+        if (boundsWidth == 568) {_btnNextScene.position = CGPointMake(552, 110); }
         _btnNextScene.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnNextScene];
         
@@ -151,7 +201,7 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
     [_yawnSound play];
     
     // get reference to the atlas
-    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"sleepfish"];
+    SKTextureAtlas *Atlas = [SKTextureAtlas atlasNamed:@"fish"];
     // create an array to hold image textures
     NSMutableArray *Textures = [NSMutableArray array];
     
@@ -170,7 +220,9 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
     
     //add "good night, monkey" text
     SKSpriteNode *goodnightMonkey = [SKSpriteNode spriteNodeWithImageNamed:@"goodnight-fish"];
-    goodnightMonkey.position = CGPointMake(780.0f, 50.0f);
+    goodnightMonkey.position = CGPointMake(780, 50);
+    if ([UIScreen mainScreen].bounds.size.width == 480) {goodnightMonkey.position = CGPointMake(285, 25); }
+    if ([UIScreen mainScreen].bounds.size.width == 568) {goodnightMonkey.position = CGPointMake(240, 180); }
     goodnightMonkey.zPosition = DrawingOrderOtherSprites;
     goodnightMonkey.alpha = 0.0;
     SKAction *fadeIn = [SKAction fadeAlphaTo:1.0 duration:2.0];
@@ -280,14 +332,15 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
 -(void) addTopEdge:(CGSize) size {
     SKNode *topEdge = [SKNode node];
     topEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0,720) toPoint:CGPointMake(size.width, 720)];
+    if ([UIScreen mainScreen].bounds.size.width == 480) {
+        topEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0,310) toPoint:CGPointMake(size.width, 310)]; }
+    if ([UIScreen mainScreen].bounds.size.width == 568) {
+        topEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0,310) toPoint:CGPointMake(size.width, 310)]; }
     topEdge.physicsBody.categoryBitMask = topEdgeCategory;
     [self addChild:topEdge];
 }
 
-//- (void)popBubbles:(CGPoint)location {
-//    [_btnBubble setTexture:[SKTexture textureWithImageNamed:@"bubblepop"]];
-//    [_btnBubble removeFromParent];
-//}
+
 
 
 - (void)changeToHome
@@ -346,7 +399,10 @@ static const uint32_t topEdgeCategory = 2;    //00000000000000000000000000000010
             [self crabTouch];
         }
         
-
+        else if([_btnPrevScene containsPoint:location]) {
+            NSLog(@"prev scene touch");
+            [self changeToPrevScene];
+        }
         
         else if([_btnNextScene containsPoint:location]) {
             NSLog(@"next scene touch");

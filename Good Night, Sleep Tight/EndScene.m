@@ -33,33 +33,54 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        //give dimension output in console
+        float boundsWidth = [UIScreen mainScreen].bounds.size.width;
+        float boundsHeight = [UIScreen mainScreen].bounds.size.height;
+        float scalefactor = [UIScreen mainScreen].scale;
+        NSLog(@"bounds width: %f, bounds height: %f", boundsWidth, boundsHeight);
+        NSLog(@"In initWithSize at %.0f wide and %.0f high", size.width, size.height);
+        NSLog(@"scale is: %f", scalefactor);
+        
         
         
         // add the night sky background
-        _btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"endnightsky"];
+        if (boundsWidth == 568) {_btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"sendnightsky568"]; }
+        else {_btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"sendnightsky"]; }
         _btnNightSky.position = CGPointMake(size.width/2, (size.height/2));
         _btnNightSky.zPosition = DrawingOrderBackground;
         [self addChild:_btnNightSky];
         
         
+
+        
+        
         // add the moon
         _btnMoon = [SKSpriteNode spriteNodeWithImageNamed:@"moon"];
-        _btnMoon.position = CGPointMake(800.0f,630.0f);
+        _btnMoon.position = CGPointMake(800,630);
+        if (boundsWidth == 480) {_btnMoon.position = CGPointMake(380, 250); }
+        if (boundsWidth == 568) {_btnMoon.position = CGPointMake(450, 230); }
         _btnMoon.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnMoon];
         
+
         
         // add the start button
         _btnBegin = [SKSpriteNode spriteNodeWithImageNamed:@"backtothestart"];
-        _btnBegin.position = CGPointMake(size.width/2, 250.0f);
+        _btnBegin.position = CGPointMake(size.width/2, 250);
+        if (boundsWidth == 480) {_btnBegin.position = CGPointMake(250, 110); }
+        if (boundsWidth == 568) {_btnBegin.position = CGPointMake(280, 110); }
         _btnBegin.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnBegin];
+        
         
         // add the non-interactive foreground image asset
         SKSpriteNode *foreground = [SKSpriteNode spriteNodeWithImageNamed:@"theend"];
         foreground.position = CGPointMake(size.width/2, size.height/2);
+        if (boundsWidth == 480) {foreground.position = CGPointMake(250, 170); }
+        if (boundsWidth == 568) {foreground.position = CGPointMake(280, 200); }
         foreground.zPosition = DrawingOrderForeground;
         [self addChild:foreground];
+        
         
         // sounds using the AVAudioPlayer so they can't be spammed
         NSURL *moonURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ukulele" ofType:@"wav"]];

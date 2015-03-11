@@ -11,6 +11,7 @@
 #import "Scene2.h"
 #import "Scene3.h"
 #import "Scene4.h"
+#import "Scene5.h"
 #import "EndScene.h"
 #import "DrawingOrder.h"
 #import <AVFoundation/AVFoundation.h>
@@ -47,29 +48,52 @@
         NSLog(@"scale is: %f", scalefactor);
         
         
+
+       
+        
         // add the night sky background
+        if (boundsWidth == 568) {_btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s0nightsky568"]; }
+        else {
         _btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s0nightsky"];
+        }
         _btnNightSky.position = CGPointMake(size.width/2, (size.height/2));
         _btnNightSky.zPosition = DrawingOrderBackground;
         [self addChild:_btnNightSky];
         
         
+
+        
+
       
         // add scene buttons
         _btnScene1 = [SKSpriteNode spriteNodeWithImageNamed:@"s0characters-s1"];
-        _btnScene1.position = CGPointMake(140, 150.0f);
+        _btnScene1.position = CGPointMake(140, 150);
+        if (boundsWidth == 480) {_btnScene1.position = CGPointMake(60, 70); }
+        if (boundsWidth == 568) {_btnScene1.position = CGPointMake(105, 70); }
         _btnScene1.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnScene1];
+        
+        
         _btnScene2 = [SKSpriteNode spriteNodeWithImageNamed:@"s0characters-s2"];
-        _btnScene2.position = CGPointMake(390, 150.0f);
+        _btnScene2.position = CGPointMake(390, 150);
+        if (boundsWidth == 480) {_btnScene2.position = CGPointMake(180, 70); }
+        if (boundsWidth == 568) {_btnScene2.position = CGPointMake(225, 70); }
         _btnScene2.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnScene2];
+        
+        
         _btnScene3 = [SKSpriteNode spriteNodeWithImageNamed:@"s0characters-s3"];
-        _btnScene3.position = CGPointMake(640, 150.0f);
+        _btnScene3.position = CGPointMake(640, 150);
+        if (boundsWidth == 480) {_btnScene3.position = CGPointMake(300, 70); }
+        if (boundsWidth == 568) {_btnScene3.position = CGPointMake(345, 70); }
         _btnScene3.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnScene3];
+        
+        
         _btnScene4 = [SKSpriteNode spriteNodeWithImageNamed:@"s0characters-s4"];
-        _btnScene4.position = CGPointMake(890, 150.0f);
+        _btnScene4.position = CGPointMake(890, 150);
+        if (boundsWidth == 480) {_btnScene4.position = CGPointMake(420, 70); }
+        if (boundsWidth == 568) {_btnScene4.position = CGPointMake(465, 70); }
         _btnScene4.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnScene4];
         
@@ -81,7 +105,9 @@
         
         //add "good night, monkey" text
         SKSpriteNode *goodnightIntro = [SKSpriteNode spriteNodeWithImageNamed:@"gnst"];
-        goodnightIntro.position = CGPointMake(495.0f, 680.0f);
+        goodnightIntro.position = CGPointMake(495, 680);
+        if (boundsWidth == 480) {goodnightIntro.position = CGPointMake(240, 280); }
+        if (boundsWidth == 568) {goodnightIntro.position = CGPointMake(285, 280); }
         goodnightIntro.zPosition = DrawingOrderOtherSprites;
         goodnightIntro.alpha = 0.0;
         SKAction *fadeIn = [SKAction fadeAlphaTo:1.0 duration:2.0];

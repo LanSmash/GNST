@@ -13,6 +13,8 @@
 @implementation ViewController
 
 
+
+
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
@@ -26,12 +28,15 @@
     
     // Create and configure the scene.
     SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    //scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.scaleMode = SKSceneScaleModeAspectFit;
+    
     
     // Present the scene.
     [skView presentScene:scene];
     }
 }
+
 
 
 
@@ -54,6 +59,9 @@
         return UIInterfaceOrientationMaskAll;
     }
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

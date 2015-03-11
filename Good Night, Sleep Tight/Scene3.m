@@ -41,60 +41,105 @@
         /* Setup your scene here */
         
         
+        //give dimension output in console
+        float boundsWidth = [UIScreen mainScreen].bounds.size.width;
+        float boundsHeight = [UIScreen mainScreen].bounds.size.height;
+        float scalefactor = [UIScreen mainScreen].scale;
+        NSLog(@"bounds width: %f, bounds height: %f", boundsWidth, boundsHeight);
+        NSLog(@"In initWithSize at %.0f wide and %.0f high", size.width, size.height);
+        NSLog(@"scale is: %f", scalefactor);
+        
+        
+        
+        
+       
         
         // add the night sky background
-        _btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s3nightsky"];
+        if (boundsWidth == 568) {_btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s3nightsky568"]; }
+        else {_btnNightSky = [SKSpriteNode spriteNodeWithImageNamed:@"s3nightsky"]; }
         _btnNightSky.position = CGPointMake(size.width/2, (size.height-215));
+        if (boundsWidth == 480) {_btnNightSky.position = CGPointMake(size.width/2, (size.height-75)); }
+        if (boundsWidth == 568) {_btnNightSky.position = CGPointMake(size.width/2, (size.height-90)); }
         _btnNightSky.zPosition = DrawingOrderBackground;
         [self addChild:_btnNightSky];
         
+        
+        
         // add the non-interactive foreground image asset
-        SKSpriteNode *foreground = [SKSpriteNode spriteNodeWithImageNamed:@"s3foreground"];
-        foreground.position = CGPointMake(size.width/2, size.height/2);
-        foreground.zPosition = DrawingOrderForeground;
-        [self addChild:foreground];
+        if (boundsWidth == 568) {
+            SKSpriteNode *foreground = [SKSpriteNode spriteNodeWithImageNamed:@"s3foreground568"];
+            foreground.position = CGPointMake(size.width/2, size.height/2);
+            foreground.zPosition = DrawingOrderForeground;
+            [self addChild:foreground]; }
+        else {
+            SKSpriteNode *foreground = [SKSpriteNode spriteNodeWithImageNamed:@"s3foreground"];
+            foreground.position = CGPointMake(size.width/2, size.height/2);
+            foreground.zPosition = DrawingOrderForeground;
+            [self addChild:foreground]; }
+        
 
+        
+        
         // add the house
         _btnHouse = [SKSpriteNode spriteNodeWithImageNamed:@"houselightson"];
-        _btnHouse.position = CGPointMake(170.0f,250.0f);
+        _btnHouse.position = CGPointMake(170, 250);
+        if (boundsWidth == 480) {_btnHouse.position = CGPointMake(75, 110); }
+        if (boundsWidth == 568) {_btnHouse.position = CGPointMake(75, 110); }
         _btnHouse.zPosition = DrawingOrderOtherSprites;
         _HouseLightsOn = YES;
         [self addChild:_btnHouse];
         
         // add the tree top
         _btnTree = [SKSpriteNode spriteNodeWithImageNamed:@"s3treetop"];
-        _btnTree.position = CGPointMake(830.0f,500.0f);
+        _btnTree.position = CGPointMake(830, 520);
+        if (boundsWidth == 480) {_btnTree.position = CGPointMake(400, 225); }
+        if (boundsWidth == 568) {_btnTree.position = CGPointMake(470, 235); }
         _btnTree.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnTree];
         
         
+        
+        
+        
         // add the animal
         _btnAnimal = [SKSpriteNode spriteNodeWithImageNamed:@"cow"];
-        _btnAnimal.position = CGPointMake(650.0f,180.0f);
+        _btnAnimal.position = CGPointMake(650, 180);
+        if (boundsWidth == 480) {_btnAnimal.position = CGPointMake(315, 85); }
+        if (boundsWidth == 568) {_btnAnimal.position = CGPointMake(365, 85); }
         _btnAnimal.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnAnimal];
         
+        
+        
         // add the moon
         _btnMoon = [SKSpriteNode spriteNodeWithImageNamed:@"moon"];
-        _btnMoon.position = CGPointMake(200.0f,630.0f);
+        _btnMoon.position = CGPointMake(200,630);
+        if (boundsWidth == 480) {_btnMoon.position = CGPointMake(100, 260); }
+        if (boundsWidth == 568) {_btnMoon.position = CGPointMake(100, 260); }
         _btnMoon.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnMoon];
         
         // add home button
         _btnHome = [SKSpriteNode spriteNodeWithImageNamed:@"homebutton"];
-        _btnHome.position = CGPointMake(930.0f,740.0f);
+        _btnHome.position = CGPointMake(930,740);
+        if (boundsWidth == 480) {_btnHome.position = CGPointMake(440, 305); }
+        if (boundsWidth == 568) {_btnHome.position = CGPointMake(515, 305); }
         _btnHome.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnHome];
         
         // add previous scene button
         _btnPrevScene = [SKSpriteNode spriteNodeWithImageNamed:@"previousscenetab"];
-        _btnPrevScene.position = CGPointMake(35.0f,220.0f);
+        _btnPrevScene.position = CGPointMake(35,220);
+        if (boundsWidth == 480) {_btnPrevScene.position = CGPointMake(15, 90); }
+        if (boundsWidth == 568) {_btnPrevScene.position = CGPointMake(15, 90); }
         _btnPrevScene.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnPrevScene];
         
         //add next scene button
         _btnNextScene = [SKSpriteNode spriteNodeWithImageNamed:@"nextscenetab"];
-        _btnNextScene.position = CGPointMake(990.0f,220.0f);
+        _btnNextScene.position = CGPointMake(990,220);
+        if (boundsWidth == 480) {_btnNextScene.position = CGPointMake(465, 90); }
+        if (boundsWidth == 568) {_btnNextScene.position = CGPointMake(552, 90); }
         _btnNextScene.zPosition = DrawingOrderOtherSprites;
         [self addChild:_btnNextScene];
         
@@ -142,7 +187,9 @@
     
     //add "good night, monkey" text
     SKSpriteNode *goodnightMonkey = [SKSpriteNode spriteNodeWithImageNamed:@"goodnight-cow"];
-    goodnightMonkey.position = CGPointMake(780.0f, 50.0f);
+    goodnightMonkey.position = CGPointMake(780, 50);
+    if ([UIScreen mainScreen].bounds.size.width == 480) {goodnightMonkey.position = CGPointMake(320, 15); }
+    if ([UIScreen mainScreen].bounds.size.width == 568) {goodnightMonkey.position = CGPointMake(345, 17); }
     goodnightMonkey.zPosition = DrawingOrderOtherSprites;
     goodnightMonkey.alpha = 0.0;
     SKAction *fadeIn = [SKAction fadeAlphaTo:1.0 duration:2.0];
@@ -183,11 +230,25 @@
     
     SKNode *bottomEdgeSlope1 = [SKNode node];
     bottomEdgeSlope1.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0,20) toPoint:CGPointMake(820, 70)];
+    if ([UIScreen mainScreen].bounds.size.width == 480) {
+        bottomEdgeSlope1.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0,0) toPoint:CGPointMake(400, 20)]; }
+    if ([UIScreen mainScreen].bounds.size.width == 568) {
+        bottomEdgeSlope1.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(50,-15) toPoint:CGPointMake(450, 15)]; }
+    
+
+    
     SKNode *bottomEdgeSlope2 = [SKNode node];
     bottomEdgeSlope2.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(820,70) toPoint:CGPointMake(size.width, 40)];
+    if ([UIScreen mainScreen].bounds.size.width == 480) {
+        bottomEdgeSlope2.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(400,20) toPoint:CGPointMake(size.width, 10)]; }
+    if ([UIScreen mainScreen].bounds.size.width == 568) {
+        bottomEdgeSlope2.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(450,15) toPoint:CGPointMake(size.width, 0)]; }
 
+    
+    
+    
     [self addChild:bottomEdgeSlope1];
-        [self addChild:bottomEdgeSlope2];
+    [self addChild:bottomEdgeSlope2];
 
 }
 
